@@ -4,9 +4,6 @@ var id = 0
 var health: int = 1
 
 func _process(delta: float) -> void:
-	print(id)
-	if Input.is_action_just_pressed("down"):
-		self.health = self.health - 1
 	if health == 0 && id != 0 :
 		queue_free()
 
@@ -26,7 +23,7 @@ func create_collision_from_line():
 		
 		collision_shape.shape = segment
 		static_body.add_child(collision_shape)
-	
-	# Optional: Set collision layers/masks
+		
 	static_body.collision_layer = 2
 	static_body.collision_mask = 2
+	

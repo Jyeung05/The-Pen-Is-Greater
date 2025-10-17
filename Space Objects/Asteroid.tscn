@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://b2082o4ob4l7v" path="res://Space Objects/spaceObjectBaseHurtbox.tscn" id="2_tr4pj"]
 [ext_resource type="Texture2D" uid="uid://5unq7wene3yn" path="res://icon.svg" id="3_uco3d"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yepak"]
-size = Vector2(119, 113)
+[sub_resource type="CircleShape2D" id="CircleShape2D_yepak"]
+radius = 57.0088
 
-[node name="Asteroid" type="CharacterBody2D"]
+[node name="Asteroid" type="RigidBody2D"]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_yepak")
@@ -26,7 +26,7 @@ texture = ExtResource("3_uco3d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -1)
-shape = SubResource("RectangleShape2D_yepak")
+shape = SubResource("CircleShape2D_yepak")
 
 [editable path="spaceObjectBaseHitbox"]
 [editable path="SpaceObjectBaseHurtbox"]

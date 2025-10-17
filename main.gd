@@ -1,5 +1,6 @@
 extends Node2D
 
+
 var rng = RandomNumberGenerator.new()
 var currentAsteroid
 @onready var asteroidScene: PackedScene = preload("res://Space Objects/Asteroid.tscn")

@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://d25cvf64hremf"]
+[gd_scene load_steps=7 format=3 uid="uid://d25cvf64hremf"]
 
 [ext_resource type="PackedScene" uid="uid://dg2oyiqv2awpr" path="res://Space Objects/spaceObjectBaseHitbox.tscn" id="1_t64kd"]
 [ext_resource type="Script" uid="uid://difwdcjpybvvf" path="res://Space Objects/asteroid.gd" id="1_yepak"]
 [ext_resource type="PackedScene" uid="uid://b2082o4ob4l7v" path="res://Space Objects/spaceObjectBaseHurtbox.tscn" id="2_tr4pj"]
 [ext_resource type="Texture2D" uid="uid://5unq7wene3yn" path="res://icon.svg" id="3_uco3d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5hhql"]
+radius = 68.2642
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yepak"]
 radius = 57.0088
@@ -17,6 +20,9 @@ script = ExtResource("1_yepak")
 collision_layer = 2
 collision_mask = 2
 
+[node name="CollisionShape2D" parent="spaceObjectBaseHitbox" index="0"]
+shape = SubResource("CircleShape2D_5hhql")
+
 [node name="SpaceObjectBaseHurtbox" parent="." instance=ExtResource("2_tr4pj")]
 collision_layer = 2
 collision_mask = 2
@@ -27,6 +33,8 @@ texture = ExtResource("3_uco3d")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -1)
 shape = SubResource("CircleShape2D_yepak")
+
+[connection signal="body_entered" from="spaceObjectBaseHitbox" to="." method="_on_space_object_base_hitbox_body_entered"]
 
 [editable path="spaceObjectBaseHitbox"]
 [editable path="SpaceObjectBaseHurtbox"]

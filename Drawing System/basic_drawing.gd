@@ -7,6 +7,7 @@ var distance: float = 0.0
 var currentEnergy:int = 0
 var failToDraw: bool = false
 var type = GlobalStats.penType.basic
+var health: float = 1.0
 
 # Change this one line to target different energy types
 var energyTarget: String = "basicEnergy"
@@ -15,7 +16,6 @@ func _ready() -> void:
 	startNew()
 
 func _process(delta: float) -> void:
-	print(getEnergy())  # Use getter function
 	
 	if Input.is_action_just_pressed("mouseClick"):
 		startNew()
@@ -32,9 +32,10 @@ func _process(delta: float) -> void:
 					failToDraw = true
 					return
 				set_energy(getEnergy() - floor(distance))  # Use setter function
+				health = (distance + health)
 			points.append(newPoint)
 			line.points = points
-			line.health += floor(distance)
+			print(health)
 			
 	if Input.is_action_just_released("mouseClick"):
 		if failToDraw:
@@ -42,6 +43,7 @@ func _process(delta: float) -> void:
 			line.points = points
 			set_energy(currentEnergy)  # Use setter function
 			return
+		line.health = health
 		line.create_collision_from_line()
 
 # Helper functions to get/set the energy
@@ -57,7 +59,7 @@ func startNew():
 	line.width = 4
 	line.default_color = colour
 	line.id = 1
-	line.health = 1
+	self.health = 1
 	self.distance = 0.0
 	self.failToDraw = false
 	add_child(line)

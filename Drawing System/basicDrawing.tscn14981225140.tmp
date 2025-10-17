@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1owcor7e1y2c"]
+
+[ext_resource type="Script" uid="uid://becc557j4508x" path="res://Drawing System/basic_drawing.gd" id="1_r2wuj"]
+[ext_resource type="Script" uid="uid://dv82k4s106kx4" path="res://Drawing System/origLine.gd" id="2_62yfy"]
+
+[node name="basicDrawings" type="Node2D"]
+script = ExtResource("1_r2wuj")
+selected = null
+
+[node name="origLine2D" type="Line2D" parent="."]
+script = ExtResource("2_62yfy")

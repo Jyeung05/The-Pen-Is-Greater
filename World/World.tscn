@@ -10,6 +10,7 @@ size = Vector2(1268, 126)
 script = ExtResource("1_y6flb")
 
 [node name="Area2D" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(576, 647)

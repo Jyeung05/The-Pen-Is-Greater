@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2082o4ob4l7v"]
+
+[ext_resource type="Script" uid="uid://cpja6uhxhk2x2" path="res://Space Objects/space_object_base_hurtbox.gd" id="1_ryf0f"]
+
+[node name="SpaceObjectBaseHurtbox" type="Area2D"]
+script = ExtResource("1_ryf0f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

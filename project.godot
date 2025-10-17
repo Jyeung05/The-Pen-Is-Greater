@@ -15,6 +15,10 @@ run/main_scene="uid://c4co1nimq33tj"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GlobalStats="*res://global_stats.gd"
+
 [dotnet]
 
 project/assembly_name="The Pen Is Greater"

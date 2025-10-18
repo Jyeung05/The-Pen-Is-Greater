@@ -27,4 +27,4 @@ func spawnAsteroids():
 		asteroid.dir = Vector2.DOWN.rotated(rng.randf_range(-spread, spread))
 
 		add_child(asteroid)
-		await get_tree().create_timer(2).timeout
+		await get_tree().create_timer(0.1).timeout

@@ -25,6 +25,7 @@ func _process(delta: float) -> void:
 		return
 	if Input.is_action_just_pressed("mouseClick"):
 		startNew()
+		print(get_global_mouse_position())
 		currentEnergy = getEnergy()  # Use getter function
 		points.append(get_global_mouse_position())
 		
@@ -63,7 +64,7 @@ func set_energy(value: int) -> void:
 func startNew():
 	line = self.get_child(0).duplicate()
 	self.points.clear()
-	line.width = 4
+	line.width = 40
 	line.default_color = colour
 	line.id = 1
 	self.health = 1

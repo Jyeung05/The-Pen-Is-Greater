@@ -44,5 +44,5 @@ func create_collision_from_line():
 		collision_shape.shape = segment
 		static_body.add_child(collision_shape)
 		
-	static_body.collision_layer = 3
+	static_body.collision_layer = 2
 	static_body.collision_mask = 2

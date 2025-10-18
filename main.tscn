@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4co1nimq33tj"]
+[gd_scene load_steps=5 format=3 uid="uid://c4co1nimq33tj"]
 
 [ext_resource type="PackedScene" uid="uid://jmylugx6rska" path="res://World/World.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://cfv4oong4e0e5" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://c1owcor7e1y2c" path="res://Drawing System/basicDrawing.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bqnqn5v3papvu" path="res://Drawing System/pen_controller.tscn" id="4_1bvp3"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_h2yge")
@@ -34,3 +35,5 @@ offset_left = -4008.0
 offset_top = -2242.0
 offset_right = -2692.0
 offset_bottom = -1379.0
+
+[node name="penController" parent="." instance=ExtResource("4_1bvp3")]

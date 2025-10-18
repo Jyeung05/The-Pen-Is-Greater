@@ -16,16 +16,7 @@ func getEnergy() -> int:
 func set_energy(value: int) -> void:
 	GlobalStats.set(energyTarget, value)
 
-func startNew():
-	line = self.get_child(0).duplicate()
-	self.points.clear()
-	line.width = 4
-	line.default_color = colour
-	line.id = 1
-	self.health = 1
-	self.distance = 0.0
-	self.failToDraw = false
-	add_child(line)
+
 	
 func select():
 	self.selected = true

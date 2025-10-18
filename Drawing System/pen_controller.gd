@@ -7,16 +7,21 @@ var lines: Array = []
 
 func _ready() -> void:
 	penArray = self.get_children()
+	selection(1)
 
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pen1"):
+		GlobalStats.currentPen = GlobalStats.penType.basic
 		selection(1)
 	elif Input.is_action_just_pressed("pen2"):
+		GlobalStats.currentPen = GlobalStats.penType.elastic
 		selection(2)
 	elif Input.is_action_just_pressed("pen3"):
+		GlobalStats.currentPen = GlobalStats.penType.phase
 		selection(3)
 	elif Input.is_action_just_pressed("pen4"):
+		GlobalStats.currentPen = GlobalStats.penType.profit
 		selection(4)
 	elif Input.is_action_just_pressed("undo"):
 		refund()

@@ -9,7 +9,7 @@
 radius = 68.2642
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2j375"]
-radius = 53.0377
+radius = 64.0078
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yepak"]
 radius = 57.0088
@@ -18,8 +18,8 @@ radius = 57.0088
 particle_flag_disable_z = true
 direction = Vector3(0, -1, 0)
 spread = 5.964
-initial_velocity_min = 124.76
-initial_velocity_max = 304.6
+initial_velocity_min = 47.84
+initial_velocity_max = 135.37
 gravity = Vector3(0, 0, 0)
 damping_min = 5.634
 damping_max = 12.676
@@ -30,7 +30,8 @@ scale_max = 12.0
 collision_layer = 2
 collision_mask = 6
 script = ExtResource("1_yepak")
-move_threshold = 30.0
+damageToDeal = null
+speed = null
 
 [node name="spaceObjectBaseHitbox" parent="." instance=ExtResource("1_t64kd")]
 collision_layer = 2
@@ -40,8 +41,6 @@ collision_mask = 4
 shape = SubResource("CircleShape2D_5hhql")
 
 [node name="SpaceObjectBaseHurtbox" parent="." instance=ExtResource("2_tr4pj")]
-collision_layer = 0
-collision_mask = 8
 
 [node name="CollisionShape2D" parent="SpaceObjectBaseHurtbox" index="0"]
 shape = SubResource("CircleShape2D_2j375")

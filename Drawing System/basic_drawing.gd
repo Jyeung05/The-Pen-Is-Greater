@@ -35,7 +35,7 @@ func _process(delta: float) -> void:
 				health = (distance + health)
 			points.append(newPoint)
 			line.points = points
-			print(health)
+
 			
 	if Input.is_action_just_released("mouseClick"):
 		if failToDraw:

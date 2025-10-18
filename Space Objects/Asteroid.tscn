@@ -25,19 +25,19 @@ scale_max = 12.0
 
 [node name="Asteroid" type="RigidBody2D"]
 collision_layer = 2
-collision_mask = 2
+collision_mask = 4
 script = ExtResource("1_yepak")
 
 [node name="spaceObjectBaseHitbox" parent="." instance=ExtResource("1_t64kd")]
 collision_layer = 2
-collision_mask = 2
+collision_mask = 4
 
 [node name="CollisionShape2D" parent="spaceObjectBaseHitbox" index="0"]
 shape = SubResource("CircleShape2D_5hhql")
 
 [node name="SpaceObjectBaseHurtbox" parent="." instance=ExtResource("2_tr4pj")]
 collision_layer = 2
-collision_mask = 2
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -1)

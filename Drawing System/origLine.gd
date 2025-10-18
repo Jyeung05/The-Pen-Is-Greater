@@ -1,7 +1,17 @@
 extends Line2D
+class_name basicLine
+
+
 var id = 0
 var health: int = 1
 var static_body: StaticBody2D = null  # Store reference to the collision body
+
+func refund() -> void:
+	get_parent().refund(self.health)
+	if static_body != null:
+		static_body.queue_free()
+	queue_free()
+
 
 func _process(delta: float) -> void:
 

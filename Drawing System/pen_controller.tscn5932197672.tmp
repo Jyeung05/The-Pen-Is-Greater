@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqnqn5v3papvu"]
+
+[ext_resource type="Script" uid="uid://dgpqf62h5dsl6" path="res://Drawing System/pen_controller.gd" id="1_py44j"]
+[ext_resource type="PackedScene" uid="uid://c1owcor7e1y2c" path="res://Drawing System/basicDrawing.tscn" id="2_di50u"]
+[ext_resource type="PackedScene" uid="uid://bv30bmd1hg0yu" path="res://Drawing System/bounceDrawing.tscn" id="3_di50u"]
+[ext_resource type="PackedScene" uid="uid://bi0h1fn36srx7" path="res://Drawing System/50phaseDrawing.tscn" id="4_cfidr"]
+
+[node name="penController" type="Node2D"]
+script = ExtResource("1_py44j")
+
+[node name="basicDrawings" parent="." instance=ExtResource("2_di50u")]
+
+[node name="bounceDrawing" parent="." instance=ExtResource("3_di50u")]
+
+[node name="50phaseDrawing" parent="." instance=ExtResource("4_cfidr")]

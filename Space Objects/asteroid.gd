@@ -44,3 +44,5 @@ func randomShoot(v: Vector2) -> void:
 
 func takeDamage(some):
 	print(some)
+func die() -> void:
+	queue_free()

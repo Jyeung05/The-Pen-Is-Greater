@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cfv4oong4e0e5" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://c1owcor7e1y2c" path="res://Drawing System/basicDrawing.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://bqnqn5v3papvu" path="res://Drawing System/pen_controller.tscn" id="4_1bvp3"]
-[ext_resource type="Script" uid="uid://wt284h3s4m0i" path="res://ui.gd" id="4_lquwl"]
+[ext_resource type="Script" path="res://ui.gd" id="4_lquwl"]
 [ext_resource type="PackedScene" uid="uid://bh0wscstt8sjq" path="res://eventSystem/boss_spawner_2d.tscn" id="5_lquwl"]
 
 [node name="Main" type="Node2D"]

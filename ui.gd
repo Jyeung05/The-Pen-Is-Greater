@@ -4,11 +4,13 @@ extends Control
 func _process(delta: float) -> void:
 	$moneyLabel.text = "Money: " + str(GlobalStats.money)
 	$healthLabel.text = "Health: " + str(int(GlobalStats.health)) 
+	$anteLabel.text = "Ante: " + str(GlobalStats.ante)
 	inkBar()
 
 func _ready() -> void:
 	$moneyLabel.add_theme_font_size_override("font_size", 200)
 	$healthLabel.add_theme_font_size_override("font_size", 200)
+	$anteLabel.add_theme_font_size_override("font_size", 200)
 	
 func inkBar():
 	if GlobalStats.currentPen == GlobalStats.penType.basic:

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv7egqv7e3gno"]
+
+[ext_resource type="Script" uid="uid://bdcxyilro0rve" path="res://eventSystem/permEvents/perm_event.gd" id="1_pcmh7"]
+
+[node name="PermEvent" type="Node2D"]
+script = ExtResource("1_pcmh7")

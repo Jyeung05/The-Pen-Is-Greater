@@ -4,9 +4,9 @@ var blackHoleScene = preload("res://eventSystem/bosses/black_hole.tscn")
 
 func action() -> void:
 	var hole1 = blackHoleScene.instantiate()
-	hole1.position = Vector2(-2000,2000)
+	hole1.position = Vector2(-2000,500)
 	var hole2 = blackHoleScene.instantiate()
-	hole2.position = Vector2(2000,2000)
+	hole2.position = Vector2(2000,500)
 	add_child(hole1)
 	add_child(hole2)
 

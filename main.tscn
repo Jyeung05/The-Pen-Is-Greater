@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c4co1nimq33tj"]
+[gd_scene load_steps=8 format=3 uid="uid://c4co1nimq33tj"]
 
 [ext_resource type="PackedScene" uid="uid://jmylugx6rska" path="res://World/World.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://cfv4oong4e0e5" path="res://main.gd" id="1_h2yge"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bqnqn5v3papvu" path="res://Drawing System/pen_controller.tscn" id="4_1bvp3"]
 [ext_resource type="Script" uid="uid://wt284h3s4m0i" path="res://ui.gd" id="4_lquwl"]
 [ext_resource type="PackedScene" uid="uid://bh0wscstt8sjq" path="res://eventSystem/boss_spawner_2d.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://cvqyukum27a0q" path="res://eventSystem/permEvents/permEventsController.tscn" id="7_272bh"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_h2yge")
@@ -50,6 +51,15 @@ offset_bottom = 618.0
 fill_mode = 3
 show_percentage = false
 
+[node name="anteLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 2821.0
+offset_top = -1070.0
+offset_right = 4025.0
+offset_bottom = -461.0
+
 [node name="penController" parent="." instance=ExtResource("4_1bvp3")]
 
 [node name="bossSpawner2D" parent="." instance=ExtResource("5_lquwl")]
+
+[node name="PermEventsController" parent="." instance=ExtResource("7_272bh")]

@@ -24,7 +24,8 @@ func _process(delta: float) -> void:
 		GlobalStats.currentPen = GlobalStats.penType.profit
 		selection(4)
 	elif Input.is_action_just_pressed("undo"):
-		refund()
+		refund()	
+		
 	
 
 func selection(penNumber:int) -> void:
@@ -83,3 +84,7 @@ func calculate_distance_to_segment(point: Vector2, segment_start: Vector2, segme
 	var t = max(0, min(1, (point - segment_start).dot(line_vec) / line_length_squared))
 	var projection = segment_start + t * line_vec
 	return point.distance_to(projection)
+
+func disablePen():
+	for pen in penArray.size():
+		penArray[pen].deselect()

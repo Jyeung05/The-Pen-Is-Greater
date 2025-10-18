@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d354w8i36qq5x"]
+
+[ext_resource type="Script" uid="uid://crdjxqk5431pb" path="res://eventSystem/boss.gd" id="1_gmo27"]
+
+[node name="boss" type="Node2D"]
+script = ExtResource("1_gmo27")

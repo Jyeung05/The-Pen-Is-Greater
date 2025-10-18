@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c74alvp0f6fry"]
+
+[ext_resource type="Script" uid="uid://n4w1tjkma61k" path="res://eventSystem/bosses/bucket_boss.gd" id="1_qbn0j"]
+
+[node name="bucketBoss" type="Node2D"]
+script = ExtResource("1_qbn0j")
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 80.0

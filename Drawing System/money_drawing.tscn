@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://by3pfm61b28kn"]
 
-[ext_resource type="Script" uid="uid://b6san57nw3gm6" path="res://money_drawing.gd" id="1_qdiy5"]
+[ext_resource type="Script" uid="uid://b6san57nw3gm6" path="res://Drawing System/money_drawing.gd" id="1_qdiy5"]
 [ext_resource type="Script" uid="uid://dl7aq5htg0mca" path="res://Drawing System/money_orig_line.gd" id="2_pgoy8"]
 
 [node name="moneyDrawing" type="Node2D"]

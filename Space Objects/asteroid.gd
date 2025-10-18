@@ -4,8 +4,17 @@ class_name Asteroid
 @export var speed: float = 500.0 # Player movement speed
 var dir: Vector2 = Vector2.RIGHT
 
+@onready var trail := $GPUParticles2D
+var velocity: Vector2
+
 func _process(delta: float) -> void:
 	self.gravity_scale = GlobalStats.gravity
+	var v := velocity
+	if v.length() > 0.0001:
+		var pm := trail.process_material as ParticleProcessMaterial
+		pm.direction = Vector3(-v.x, -v.y, 0).normalized()  # Vector3 required
+		# Optional: keep node unrotated
+		trail.rotation = 0.0
 	
 func _ready() -> void:
 	body_entered.connect(_on_space_object_base_hitbox_body_entered)

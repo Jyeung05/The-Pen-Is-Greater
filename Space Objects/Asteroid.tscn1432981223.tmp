@@ -13,20 +13,17 @@ radius = 57.0088
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_yepak"]
 particle_flag_disable_z = true
-direction = Vector3(0, -1, 0)
 spread = 5.964
-initial_velocity_min = 124.76
+initial_velocity_min = 63.22
 initial_velocity_max = 304.6
-gravity = Vector3(0, 0, 0)
-damping_min = 5.634
-damping_max = 12.676
-scale_min = 5.0
-scale_max = 12.0
+gravity = Vector3(0, 98, 0)
 
 [node name="Asteroid" type="RigidBody2D"]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_yepak")
+damageToDeal = null
+speed = null
 
 [node name="spaceObjectBaseHitbox" parent="." instance=ExtResource("1_t64kd")]
 collision_layer = 2
@@ -56,8 +53,8 @@ shadow_color = Color(0, 0, 0, 0.568627)
 texture = ExtResource("4_yepak")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-scale = Vector2(5, 5)
-amount = 10
+amount = 250
+lifetime = 0.25
 process_material = SubResource("ParticleProcessMaterial_yepak")
 
 [connection signal="body_entered" from="spaceObjectBaseHitbox" to="." method="_on_space_object_base_hitbox_body_entered"]

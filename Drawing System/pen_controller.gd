@@ -6,9 +6,8 @@ var lines: Array = []
 
 
 func _ready() -> void:
-	penArray.append(self.get_child(0))
-	penArray.append(self.get_child(1))
-	penArray.append(self.get_child(2))
+	penArray = self.get_children()
+
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pen1"):
@@ -17,6 +16,8 @@ func _process(delta: float) -> void:
 		selection(2)
 	elif Input.is_action_just_pressed("pen3"):
 		selection(3)
+	elif Input.is_action_just_pressed("pen4"):
+		selection(4)
 	elif Input.is_action_just_pressed("undo"):
 		refund()
 	

@@ -64,7 +64,7 @@ func set_energy(value: int) -> void:
 func startNew():
 	line = self.get_child(0).duplicate()
 	self.points.clear()
-	line.width = 40
+	line.width = 80
 	line.default_color = colour
 	line.id = 1
 	self.health = 1

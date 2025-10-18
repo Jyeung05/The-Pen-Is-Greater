@@ -8,10 +8,11 @@ func _ready() -> void:
 	bossClock()
 	
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("pen1"):
-		bosses[1].activate()
-		await get_tree().create_timer(5).timeout
-		bosses[1].deactivate
+	#if Input.is_action_pressed("pen1"):
+		#bosses[2].activate()
+		#await get_tree().create_timer(5).timeout
+		#bosses[2].deactivate
+	pass
 func bossClock() -> void:
 	while true:
 		var response:bool = false

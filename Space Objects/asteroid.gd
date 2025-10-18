@@ -5,6 +5,8 @@ class_name Asteroid
 @export var speed: float = 500.0
 var dir: Vector2 = Vector2.RIGHT
 
+
+
 @onready var trail: GPUParticles2D = $GPUParticles2D
 var velocity: Vector2
 
@@ -15,7 +17,6 @@ var _was_emitting := true
 func _ready() -> void:
 	_was_emitting = true
 	trail.emitting = true   # start as-is; no amount/alpha changes
-
 func _physics_process(delta: float) -> void:
 	apply_central_impulse(dir)
 
@@ -46,3 +47,10 @@ func takeDamage(some):
 	print(some)
 func die() -> void:
 	queue_free()
+	
+func changeGravity(amount):
+	self.gravity_scale = amount
+
+
+
+	

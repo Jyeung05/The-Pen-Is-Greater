@@ -14,4 +14,4 @@ func action() -> void:
 	
 func deactivate() -> void:
 	for child in get_children():
-		child.die()
+		child.queue_free()

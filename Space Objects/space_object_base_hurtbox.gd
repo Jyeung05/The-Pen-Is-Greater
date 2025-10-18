@@ -1,9 +1,13 @@
 extends Area2D
 
 
-func _on_body_entered(body: Node2D) -> void:
-	pass
+
 	
 
 func die():
-	queue_free()
+	await get_tree().create_timer(0.1).timeout
+	get_parent().queue_free()
+
+
+func _on_area_entered(area: Area2D) -> void:
+	die()

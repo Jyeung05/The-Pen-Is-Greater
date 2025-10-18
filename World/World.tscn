@@ -8,6 +8,7 @@
 background_mode = 3
 glow_enabled = true
 glow_intensity = 0.1
+glow_bloom = 0.05
 glow_blend_mode = 1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_il6x7"]
@@ -51,7 +52,7 @@ offset_left = -5000.0
 offset_top = -4194.0
 offset_right = -4113.0
 offset_bottom = 4590.0
-color = Color(0.972549, 0, 0.113725, 1)
+color = Color(0.287469, 0.278987, 0.279128, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
 visible = false
@@ -66,7 +67,7 @@ offset_left = 4113.0
 offset_top = -4314.0
 offset_right = 5000.0
 offset_bottom = 4779.0
-color = Color(0.973608, 0, 0.114919, 1)
+color = Color(0.286275, 0.278431, 0.278431, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 visible = false

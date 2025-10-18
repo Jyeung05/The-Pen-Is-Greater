@@ -9,13 +9,6 @@ func _ready() -> void:
 	rng.randomize()
 	currentAsteroid = asteroidScene
 	spawnAsteroids()
-	$Control/moneyLabel.add_theme_font_size_override("font_size", 200)
-	$Control/healthLabel.add_theme_font_size_override("font_size", 200)
-
-func _process(delta: float) -> void:
-	$Control/moneyLabel.text = "Money: " + str(GlobalStats.money)
-	$Control/healthLabel.text = "Health: " + str(int(GlobalStats.health))
-
 
 
 func spawnAsteroids():

@@ -1,4 +1,5 @@
 extends Node2D
+class_name basicDrawing
 
 @export var selected:bool = false
 var line:Line2D
@@ -12,6 +13,10 @@ var health: float = 1.0
 # Change this one line to target different energy types
 var energyTarget: String = "basicEnergy"
 var colour = Color.YELLOW
+
+func refund(health) -> void:
+	set_energy(getEnergy() + health)
+	
 func _ready() -> void:
 	startNew()
 
@@ -36,7 +41,6 @@ func _process(delta: float) -> void:
 				health = (distance + health)
 			points.append(newPoint)
 			line.points = points
-			print(health)
 			
 	if Input.is_action_just_released("mouseClick"):
 		if failToDraw:
@@ -46,6 +50,7 @@ func _process(delta: float) -> void:
 			return
 		line.health = health
 		line.create_collision_from_line()
+		self.get_parent().addToList(line)
 
 # Helper functions to get/set the energy
 func getEnergy() -> int:

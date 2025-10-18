@@ -1,6 +1,6 @@
 extends Node
 
-@export var health: float = 0.0
+@export var health: float = 100.0
 @export var money: int = 0
 @export var gravity: float = 1.0
 

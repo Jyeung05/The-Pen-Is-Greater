@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://x5yvup406xiq"]
+
+[ext_resource type="Texture2D" uid="uid://d0dsechmt3i4w" path="res://title/Title.png" id="1_v6p8y"]
+
+[node name="title screen" type="Sprite2D"]
+texture_filter = 1
+position = Vector2(576, 327)
+scale = Vector2(2.48333, 2.48333)
+texture = ExtResource("1_v6p8y")

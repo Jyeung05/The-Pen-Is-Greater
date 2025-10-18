@@ -1,13 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://jmylugx6rska"]
 
 [ext_resource type="Script" uid="uid://dtsb547aq6hgl" path="res://World/world.gd" id="1_y6flb"]
-[ext_resource type="Texture2D" uid="uid://5unq7wene3yn" path="res://icon.svg" id="2_mlekv"]
+[ext_resource type="Texture2D" uid="uid://oj0xqvjttydo" path="res://World/background.png" id="2_y6flb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_il6x7"]
 size = Vector2(1268, 126)
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_y6flb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576.5, 276)
+scale = Vector2(9.88281, 8.18519)
+texture = ExtResource("2_y6flb")
 
 [node name="Area2D" type="RigidBody2D" parent="."]
 gravity_scale = 0.0
@@ -16,7 +21,9 @@ gravity_scale = 0.0
 position = Vector2(576, 647)
 shape = SubResource("RectangleShape2D_il6x7")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-position = Vector2(576.5, 650)
-scale = Vector2(9.88281, 1)
-texture = ExtResource("2_mlekv")
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -57.0
+offset_top = 583.0
+offset_right = 1213.0
+offset_bottom = 709.0
+color = Color(0.192193, 0.449005, 0.254343, 1)

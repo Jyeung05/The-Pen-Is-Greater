@@ -10,8 +10,8 @@ var type = GlobalStats.penType.basic
 var health: float = 1.0
 
 # Change this one line to target different energy types
-var energyTarget: String = "basicEnergy"
-var colour = Color.YELLOW
+var energyTarget: String = "damageEnergy"
+var colour = Color.RED
 func _ready() -> void:
 	startNew()
 
@@ -36,7 +36,6 @@ func _process(delta: float) -> void:
 				health = (distance + health)
 			points.append(newPoint)
 			line.points = points
-			print(health)
 			
 	if Input.is_action_just_released("mouseClick"):
 		if failToDraw:

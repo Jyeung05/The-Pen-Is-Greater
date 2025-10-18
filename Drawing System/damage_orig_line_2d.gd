@@ -2,12 +2,13 @@ extends Line2D
 var id = 0
 var health: int = 1
 var static_body: StaticBody2D = null  # Store reference to the collision body
+var damage: int
 
 func _process(delta: float) -> void:
+	print(self.health)
 	if health <= 0 && id != 0:
 		# Free the static body first if it exists
-		if static_body != null:
-			static_body.queue_free()
+
 		queue_free()
 
 func takeDamage(damage) -> void:
@@ -16,7 +17,7 @@ func takeDamage(damage) -> void:
 func create_collision_from_line():
 	# Create a StaticBody2D to hold the collision
 	static_body = StaticBody2D.new()
-	get_parent().add_child(static_body)
+	add_child(static_body)
 	
 	# Store reference to the Line2D in the StaticBody2D
 	static_body.set_meta("line_owner", self)

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv30bmd1hg0yu"]
+
+[ext_resource type="Script" uid="uid://chnxo785dh3p5" path="res://Drawing System/damage_drawing.gd" id="1_rjv3u"]
+[ext_resource type="Script" uid="uid://b4odftcickin" path="res://Drawing System/damage_orig_line_2d.gd" id="2_rjv3u"]
+
+[node name="damageDrawing" type="Node2D"]
+script = ExtResource("1_rjv3u")
+
+[node name="origLine2D" type="Line2D" parent="."]
+script = ExtResource("2_rjv3u")

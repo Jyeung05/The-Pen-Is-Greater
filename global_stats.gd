@@ -7,4 +7,4 @@ extends Node
 enum penType {basic, damage, money}
 
 @export var basicEnergy: int = 2000
-@export var damageEnergy: int =100
+@export var damageEnergy: int =2000

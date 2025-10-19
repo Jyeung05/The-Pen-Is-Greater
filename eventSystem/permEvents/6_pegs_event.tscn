@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmmldgbshe2yh"]
+
+[ext_resource type="Script" uid="uid://blqumc05fle66" path="res://eventSystem/permEvents/6_pegs_event.gd" id="1_oogth"]
+
+[node name="6pegsEvent" type="Node2D"]
+script = ExtResource("1_oogth")

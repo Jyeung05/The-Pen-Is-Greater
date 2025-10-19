@@ -1,10 +1,13 @@
 extends boss
 
 
-
+var bossName = "\"The Bucket\""
+var description = "Collects balls in a bucket"
 
 func action() -> void:
-	var p:Array = [Vector2(-1500.0,-500), Vector2(-1000,500), Vector2(1000,500), Vector2(1500,-500)]
+	var xOff = randi_range(-500,500)
+	var yOff = randi_range(-500,500)
+	var p:Array = [Vector2(-1500.0 + xOff,-500 + yOff), Vector2(-1000 + xOff ,500+ yOff), Vector2(1000 + xOff ,500+ yOff), Vector2(1500 + xOff,-500+ yOff)]
 	
 	var line = get_child(0)
 	line.points = p  # Fixed: remove brackets

@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvqyukum27a0q"]
+
+[ext_resource type="Script" uid="uid://c6bgwbfr6cvja" path="res://eventSystem/permEvents/perm_events_controller.gd" id="1_hfaxe"]
+[ext_resource type="PackedScene" uid="uid://do07my0n2somc" path="res://eventSystem/permEvents/half246.tscn" id="2_1cp6q"]
+[ext_resource type="PackedScene" uid="uid://dmmldgbshe2yh" path="res://eventSystem/permEvents/6_pegs_event.tscn" id="2_pmji2"]
+[ext_resource type="PackedScene" uid="uid://cmav2mmm0cx4v" path="res://eventSystem/permEvents/gold_17_event.tscn" id="3_yh71m"]
+
+[node name="PermEventsController" type="Node2D"]
+script = ExtResource("1_hfaxe")
+
+[node name="6pegsEvent" parent="." instance=ExtResource("2_pmji2")]
+
+[node name="half246" parent="." instance=ExtResource("2_1cp6q")]
+
+[node name="gold17Event" parent="." instance=ExtResource("3_yh71m")]

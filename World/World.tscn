@@ -76,23 +76,29 @@ visible = false
 position = Vector2(4556, -737)
 shape = SubResource("RectangleShape2D_y6flb")
 
+[node name="scoreBasket1" parent="." instance=ExtResource("3_mlekv")]
+position = Vector2(-4057, 2539)
+
 [node name="scoreBasket7" parent="." instance=ExtResource("3_mlekv")]
 position = Vector2(2979, 2534)
+id = 7
 
 [node name="scoreBasket2" parent="." instance=ExtResource("3_mlekv")]
-position = Vector2(1814, 2534)
+position = Vector2(-2874, 2545)
+id = 2
 
 [node name="scoreBasket5" parent="." instance=ExtResource("3_mlekv")]
-position = Vector2(-4040, 2534)
+position = Vector2(642, 2531)
+id = 5
 
 [node name="scoreBasket6" parent="." instance=ExtResource("3_mlekv")]
-position = Vector2(-2870, 2534)
+position = Vector2(1799, 2534)
+id = 6
 
 [node name="scoreBasket4" parent="." instance=ExtResource("3_mlekv")]
 position = Vector2(-530, 2533)
+id = 4
 
 [node name="scoreBasket3" parent="." instance=ExtResource("3_mlekv")]
-position = Vector2(648, 2534)
-
-[node name="scoreBasket" parent="." instance=ExtResource("3_mlekv")]
-position = Vector2(-1695, 2534)
+position = Vector2(-1696, 2544)
+id = 3

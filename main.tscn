@@ -36,6 +36,13 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("4_lquwl")
 
+[node name="eventLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -4097.0
+offset_top = -1632.0
+offset_right = -2893.0
+offset_bottom = -1023.0
+
 [node name="moneyLabel" type="Label" parent="Control"]
 layout_mode = 0
 offset_left = 4135.0
@@ -47,9 +54,9 @@ theme_override_font_sizes/font_size = 250
 [node name="healthLabel" type="Label" parent="Control"]
 visible = false
 layout_mode = 0
-offset_left = 2758.0
+offset_left = 2757.0
 offset_top = -1503.0
-offset_right = 3838.0
+offset_right = 3837.0
 offset_bottom = -928.0
 
 [node name="penInk" type="ProgressBar" parent="Control"]
@@ -60,6 +67,13 @@ offset_right = -4260.0
 offset_bottom = 618.0
 fill_mode = 3
 show_percentage = false
+
+[node name="anteLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 2821.0
+offset_top = -1070.0
+offset_right = 4025.0
+offset_bottom = -461.0
 
 [node name="penController" parent="." instance=ExtResource("4_1bvp3")]
 

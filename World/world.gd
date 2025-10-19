@@ -13,13 +13,17 @@ func _process(delta: float) -> void:
 		GlobalStats.restart()
 
 func goal() -> void:
+	GlobalStats.anteCountDown = 30
 	while true:
-		await get_tree().create_timer(500, false).timeout
+		while GlobalStats.anteCountDown > 0:
+			await get_tree().create_timer(1, false).timeout
+			GlobalStats.anteCountDown = GlobalStats.anteCountDown - 1
 		if GlobalStats.money < GlobalStats.ante:
 			$loseScreen.visible = true
 			
 		else:
 			GlobalStats.ante = GlobalStats.ante * 2
+			GlobalStats.anteCountDown = 30
 
 func getBaskets():
 	var children = get_children()

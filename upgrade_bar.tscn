@@ -38,15 +38,11 @@ lockedName = &"bounceUnlocked"
 upgradeCost = 10
 unlockCost = 5
 
-[node name="statCard3" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
+[node name="statCard6" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
 layout_mode = 2
-display_name = "Phase Pen"
-filled_color = Color(0, 1, 0, 1)
-global_var_max = &"phaseEnergyMax"
-global_var = &"phaseEnergy"
-lockedName = &"phaseUnlocked"
-upgradeCost = 15
-unlockCost = 30
+display_name = "Increase Score Profits"
+global_var_max = &"worth"
+global_var = &"asteroidWorth"
 
 [node name="statCard4" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
 layout_mode = 2
@@ -64,11 +60,15 @@ display_name = "Increase Spawn Rate"
 global_var_max = &"spawn"
 global_var = &"spawnCooldown"
 
-[node name="statCard6" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
+[node name="statCard3" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
 layout_mode = 2
-display_name = "Increase Score Profits"
-global_var_max = &"worth"
-global_var = &"asteroidWorth"
+display_name = "Phase Pen"
+filled_color = Color(0, 1, 0, 1)
+global_var_max = &"phaseEnergyMax"
+global_var = &"phaseEnergy"
+lockedName = &"phaseUnlocked"
+upgradeCost = 15
+unlockCost = 30
 
 [node name="statCard7" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
 layout_mode = 2
@@ -78,12 +78,6 @@ global_var = &"buffAmount"
 lockedName = &"Special Buff"
 upgradeCostMultiplyer = 10
 upgradeCost = 10
-
-[node name="statCard8" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
-layout_mode = 2
-display_name = ""
-global_var_max = &""
-global_var = &""
 
 [node name="pointsLabel" type="Label" parent="HBoxContainer"]
 layout_mode = 2

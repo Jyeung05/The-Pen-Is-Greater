@@ -47,11 +47,11 @@ offset_bottom = -1023.0
 
 [node name="moneyLabel" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 4135.0
-offset_top = -2091.0
-offset_right = 4849.0
-offset_bottom = -1482.0
-theme_override_font_sizes/font_size = 250
+offset_left = 4611.0
+offset_top = -2682.0
+offset_right = 5383.0
+offset_bottom = -2273.0
+theme_override_font_sizes/font_size = 300
 
 [node name="healthLabel" type="Label" parent="Control"]
 visible = false
@@ -63,19 +63,19 @@ offset_bottom = -928.0
 
 [node name="penInk" type="ProgressBar" parent="Control"]
 layout_mode = 0
-offset_left = -4423.0
-offset_top = -2078.0
+offset_left = -4521.0
+offset_top = -2452.0
 offset_right = -4260.0
-offset_bottom = 618.0
+offset_bottom = 1061.0
 fill_mode = 3
 show_percentage = false
 
 [node name="anteLabel" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 2821.0
-offset_top = -1070.0
-offset_right = 4025.0
-offset_bottom = -461.0
+offset_left = 4278.0
+offset_top = -2079.0
+offset_right = 5482.0
+offset_bottom = -1470.0
 
 [node name="buffLabel" type="Label" parent="Control"]
 layout_mode = 0
@@ -83,6 +83,14 @@ offset_left = -4023.0
 offset_top = -515.0
 offset_right = -2819.0
 offset_bottom = 94.0
+
+[node name="anteCountdown" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -3963.0
+offset_top = -3125.0
+offset_right = -2934.0
+offset_bottom = -2579.0
+theme_override_font_sizes/font_size = 250
 
 [node name="penController" parent="." instance=ExtResource("4_1bvp3")]
 
@@ -122,13 +130,13 @@ offset_bottom = -826.0
 [node name="openShop" type="Button" parent="shopUI"]
 process_mode = 3
 layout_mode = 0
-offset_left = 4143.0
-offset_top = -1575.0
-offset_right = 4719.0
-offset_bottom = -1110.0
-theme_override_font_sizes/font_size = 200
+offset_left = 4273.0
+offset_top = -1589.0
+offset_right = 6036.0
+offset_bottom = -778.0
+theme_override_font_sizes/font_size = 300
 toggle_mode = true
-text = "SHOP"
+text = "UPGRADES"
 
 [node name="PermEventsController" parent="." instance=ExtResource("9_kek77")]
 

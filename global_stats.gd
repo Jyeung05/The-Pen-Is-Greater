@@ -32,12 +32,12 @@ var currentPen = penType.basic
 @export var buffAmount = 0
 @export var buffMax = 8
 
-@export var spawnCooldown: float = 1.0
+@export var spawnCooldown: float = 3
 @export var asteroidWorth: int = 1
-
+var anteCountDown: int = 0
 @export var restartCounter = 0
 # RESTART VARIABLES
-
+var RanteCountdown = anteCountDown
 var Rhealth: float = health
 var Rmoney: int = money
 var Rgravity: float = gravity
@@ -57,6 +57,7 @@ var RasteroidWorth: int = asteroidWorth
 
 
 func restart():
+	anteCountDown = RanteCountdown
 	health = Rhealth
 	money = 0
 	gravity = Rgravity

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="The Pen Is Greater"
-run/main_scene="uid://c4co1nimq33tj"
+run/main_scene="uid://x5yvup406xiq"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 

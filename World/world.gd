@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 func goal() -> void:
 	GlobalStats.anteCountDown = 30
 	while true:
-		while GlobalStats.anteCountDown > 0:
+		while GlobalStats.anteCountDown > -1:
 			await get_tree().create_timer(1, false).timeout
 			GlobalStats.anteCountDown = GlobalStats.anteCountDown - 1
 		if GlobalStats.money < GlobalStats.ante:

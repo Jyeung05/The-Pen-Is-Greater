@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 		reFlag = true
 		bossClock()
 		reCounter += 1
-	pass
+	
 	#if Input.is_action_just_pressed("pen1"):
 		#bosses[4].activate()
 		#await get_tree().create_timer(5, false).timeout  # Added pause-aware parameter

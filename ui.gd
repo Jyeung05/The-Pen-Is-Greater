@@ -6,18 +6,26 @@ func _process(delta: float) -> void:
 	$healthLabel.text = "Health: " + str(int(GlobalStats.health)) 
 	$anteLabel.text = "Ante: " + str(GlobalStats.ante)
 	$eventLabel.text = "Events: " + eventListToString()
-
+	$buffLabel.text = "Buffs: " + buffListToString()
 	inkBar()
-
+	
+func buffListToString() -> String:
+	var s:String = ""
+	for line in GlobalStats.buffList:
+		s = s + line +"\n"
+	return s
+	
 func eventListToString() -> String:
 	var s:String = ""
 	for line in GlobalStats.eventList:
 		s = s + line +"\n"
 	return s
+	
 func _ready() -> void:
 	pass
 	$anteLabel.add_theme_font_size_override("font_size", 200)
 	$eventLabel.add_theme_font_size_override("font_size", 100)
+	$buffLabel.add_theme_font_size_override("font_size", 100)
 
 func inkBar():
 	if GlobalStats.currentPen == GlobalStats.penType.basic:

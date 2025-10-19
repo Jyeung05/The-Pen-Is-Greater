@@ -4,8 +4,8 @@ class_name scoreBasket
 enum mode {SCORE, HURT, BONUS}
 @export var currentMode = mode.SCORE
 @export var damage: float = 1
-var moneyAddAmount: int = GlobalStats.asteroidWorth
-@export var moneyMult: int = 1 
+var moneyAddAmount: int =  GlobalStats.asteroidWorth
+@export var moneyMult: float = 1.0
 @export var id: int = 1
 var label
 
@@ -14,6 +14,8 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	pass
+	
+	
 func switchMode():
 	if currentMode == mode.SCORE:
 		$ColorRect.color = Color("f8001d")
@@ -47,8 +49,8 @@ func money() -> int:
 	for val in distrabution:
 		sum += val
 	var average = sum/7
-	var cash = ( average/distrabution[id -1] + moneyAddAmount ) *moneyMult
-	return cash
+	var cash = int( ceil((float(average)/float(distrabution[id -1])) * moneyAddAmount  * moneyMult))
+	return min(cash,1)
 
 func mutateMult(i:int):
 	self.moneyMult = i

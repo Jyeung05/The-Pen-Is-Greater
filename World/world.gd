@@ -15,3 +15,11 @@ func goal() -> void:
 			print("you loose")
 		else:
 			GlobalStats.ante = GlobalStats.ante * 2
+
+func getBaskets():
+	var children = get_children()
+	var retBaskets = []
+	for child in children:
+		if child.name.begins_with("scoreBasket"):
+			retBaskets.append(child)
+	return retBaskets

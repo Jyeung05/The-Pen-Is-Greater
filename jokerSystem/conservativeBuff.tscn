@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp3dobcjr7b7w"]
+
+[ext_resource type="Script" uid="uid://bh2pxiyuquws" path="res://jokerSystem/conservative_buff.gd" id="1_2xxur"]
+
+[node name="ConservativeBuff" type="Node2D"]
+script = ExtResource("1_2xxur")

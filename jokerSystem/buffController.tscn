@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://jdcvygq6cqh2"]
+[gd_scene load_steps=5 format=3 uid="uid://jdcvygq6cqh2"]
 
 [ext_resource type="Script" uid="uid://dbd2woc3xswu1" path="res://jokerSystem/buff_controller.gd" id="1_52873"]
+[ext_resource type="PackedScene" uid="uid://dp3dobcjr7b7w" path="res://jokerSystem/conservativeBuff.tscn" id="2_mgco1"]
+[ext_resource type="PackedScene" uid="uid://b0sn6s6m3kyso" path="res://jokerSystem/oddBufftscn.tscn" id="3_ih54f"]
+[ext_resource type="PackedScene" uid="uid://bnv7yu020pc7i" path="res://jokerSystem/buffBuff.tscn" id="4_vofbf"]
 
 [node name="BuffController" type="Node2D"]
 script = ExtResource("1_52873")
+
+[node name="ConservativeBuff" parent="." instance=ExtResource("2_mgco1")]
+
+[node name="oddBuff" parent="." instance=ExtResource("3_ih54f")]
+
+[node name="BuffBuff" parent="." instance=ExtResource("4_vofbf")]

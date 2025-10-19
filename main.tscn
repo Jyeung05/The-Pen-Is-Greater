@@ -77,6 +77,13 @@ offset_top = -1070.0
 offset_right = 4025.0
 offset_bottom = -461.0
 
+[node name="buffLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -4023.0
+offset_top = -515.0
+offset_right = -2819.0
+offset_bottom = 94.0
+
 [node name="penController" parent="." instance=ExtResource("4_1bvp3")]
 
 [node name="bossSpawner2D" parent="." instance=ExtResource("5_lquwl")]

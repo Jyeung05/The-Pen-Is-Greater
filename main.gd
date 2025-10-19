@@ -30,5 +30,3 @@ func spawnAsteroids():
 func setGravity(amount):
 	gravityChange = amount
 	
-
-	

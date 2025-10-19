@@ -1,16 +1,22 @@
 extends Node2D
 
-var desc = "6 pegs to block your path"
+var desc = "10 pegs to block your path"
 
 func activate():
 	print("pegs")
 	var positions = [
-		Vector2(0.0, -800.0),
-		Vector2(-800, 0.0),
-		Vector2(800, 000.0),
-		Vector2(-1600, 800),
-		Vector2(0, 800),
-		Vector2(1600, 800)
+		Vector2(0.0, -1600.0),
+		Vector2(-800, -800.0),
+		Vector2(800, -800.0),
+		Vector2(-1600, 000),
+		Vector2(0, 000),
+		Vector2(1600, 000),
+		Vector2(2400, 800), 
+		Vector2(800, 800), 
+		Vector2(-800, 800), 
+		Vector2(-2400, 800), 
+
+		
 	]
 	
 	for pos in positions:

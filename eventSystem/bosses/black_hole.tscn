@@ -11,7 +11,8 @@ radius = 1891.29
 script = ExtResource("1_dmvex")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
+position = Vector2(-2.525, 0)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_v06qc")
 
 [node name="Area2D" type="Area2D" parent="."]

@@ -45,7 +45,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		
 func money() -> int:
 	var distrabution = GlobalStats.distrabution
-	var sum = 0
+	var sum = GlobalStats.asteroidWorth
 	for val in distrabution:
 		sum += val
 	var average = sum/7

@@ -32,7 +32,7 @@ var currentPen = penType.basic
 @export var buffAmount = 0
 @export var buffMax = 8
 
-@export var spawnCooldown: float = 1.0
+@export var spawnCooldown: float = 3
 @export var asteroidWorth: int = 1
 
 # RESTART VARIABLES

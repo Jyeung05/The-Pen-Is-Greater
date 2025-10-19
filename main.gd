@@ -11,7 +11,6 @@ func _ready() -> void:
 	currentAsteroid = asteroidScene
 	spawnAsteroids()
 
-
 func spawnAsteroids():
 	while true:
 		while get_tree().paused:
@@ -26,7 +25,7 @@ func spawnAsteroids():
 		asteroid.dir = Vector2.DOWN.rotated(rng.randf_range(-spread, spread))
 
 		add_child(asteroid)
-		await get_tree().create_timer(0.1).timeout
+		await get_tree().create_timer(GlobalStats.spawnCooldown).timeout
 
 func setGravity(amount):
 	gravityChange = amount

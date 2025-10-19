@@ -17,10 +17,10 @@ func bossClock() -> void:
 	while true:
 		var response:bool = false
 		print("boss timer start")
-		await get_tree().create_timer(4).timeout
+		await get_tree().create_timer(3).timeout
 		var select
 		var eventListPoint = 0
-		if !response:
+		while !response:
 			print("spawning boss")
 			var rng = RandomNumberGenerator.new()
 			select = rng.randi_range(0, bosses.size() - 1)

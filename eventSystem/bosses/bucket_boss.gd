@@ -5,15 +5,16 @@ var bossName = "\"The Bucket\""
 var description = "Collects balls in a bucket"
 
 func action() -> void:
-	var xOff = randi_range(-500,500)
-	var yOff = randi_range(-500,500)
+	var xOff = randi_range(-1000,1000)
+	var yOff = randi_range(-1000,1000)
 	var p:Array = [Vector2(-1500.0 + xOff,-500 + yOff), Vector2(-1000 + xOff ,500+ yOff), Vector2(1000 + xOff ,500+ yOff), Vector2(1500 + xOff,-500+ yOff)]
 	
-	var line = get_child(0)
+	var line = Line2D.new()
 	line.points = p  # Fixed: remove brackets
 	line.width = 80
 	line.default_color = Color.YELLOW
 	
+	add_child(line)
 	var static_body = StaticBody2D.new()
 	# Position the static body at the same position as the line's parent
 	static_body.global_position = global_position

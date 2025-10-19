@@ -10,7 +10,7 @@ func _ready() -> void:
 	
 func goal() -> void:
 	while true:
-		await get_tree().create_timer(10).timeout
+		await get_tree().create_timer(20).timeout
 		if GlobalStats.money < GlobalStats.ante:
 			print("you loose")
 		else:

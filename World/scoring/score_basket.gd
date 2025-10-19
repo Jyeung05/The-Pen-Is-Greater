@@ -6,7 +6,7 @@ enum mode {SCORE, HURT, BONUS}
 @export var damage: float = 1
 @export var moneyAddAmount: int = 1
 @export var moneyMult: int =1 
-@export var id: int = 1
+@export var id: int
 var label
 
 func _ready() -> void:

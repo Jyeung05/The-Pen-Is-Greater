@@ -21,7 +21,7 @@ func spawnAsteroids():
 		
 		asteroid.changeGravity(gravityChange)
 		
-		asteroid.global_position = Vector2(rng.randf_range(-200, 200), rng.randf_range(-2000.0, -1500))
+		asteroid.global_position = Vector2(rng.randf_range(-200, 200), rng.randf_range(-4000.0, -3500))
 		var spread = deg_to_rad(20.0)
 		asteroid.dir = Vector2.DOWN.rotated(rng.randf_range(-spread, spread))
 

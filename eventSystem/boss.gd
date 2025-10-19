@@ -20,5 +20,5 @@ func deactivate() -> void:
 	pass
 
 func flip():
-	await get_tree().create_timer(70).timeout
+	await get_tree().create_timer(2).timeout
 	canActivate = true

@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://s0k0lgp4lsdy" path="res://eventSystem/bosses/gravityBoss.tscn" id="4_ry377"]
 
 [node name="bossSpawner2D" type="Node2D"]
-process_mode = 1
 script = ExtResource("1_r4bpu")
 
 [node name="bucketBoss" parent="." instance=ExtResource("2_qcrht")]

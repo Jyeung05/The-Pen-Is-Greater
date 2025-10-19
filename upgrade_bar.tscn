@@ -61,10 +61,14 @@ unlockCost = 50
 [node name="statCard5" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
 layout_mode = 2
 display_name = "Increase Spawn Rate"
+global_var_max = &"spawn"
+global_var = &"spawnCooldown"
 
 [node name="statCard6" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
 layout_mode = 2
 display_name = "Increase Score Profits"
+global_var_max = &"worth"
+global_var = &"asteroidWorth"
 
 [node name="statCard7" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
 layout_mode = 2

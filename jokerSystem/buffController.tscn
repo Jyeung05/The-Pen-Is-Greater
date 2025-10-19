@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://jdcvygq6cqh2"]
+
+[ext_resource type="Script" uid="uid://dbd2woc3xswu1" path="res://jokerSystem/buff_controller.gd" id="1_52873"]
+
+[node name="BuffController" type="Node2D"]
+script = ExtResource("1_52873")

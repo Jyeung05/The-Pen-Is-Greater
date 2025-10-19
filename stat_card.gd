@@ -34,7 +34,8 @@ func _ready() -> void:
 	print(GlobalStats.get(lockedName))
 
 func _on_plus() -> void:
-	if GlobalStats.money > upgradeCost and GlobalStats.get(lockedName) == true:
+	print(lockedName)
+	if GlobalStats.money >= upgradeCost and GlobalStats.get(lockedName) == true:
 		if level >= max_level:
 			return
 		level += 1
@@ -45,9 +46,29 @@ func _on_plus() -> void:
 		plus_btn.text = "Upgrade Cost: $" + str(upgradeCost)
 		_refresh()
 	
-	if GlobalStats.money > unlockCost and GlobalStats.get(lockedName) == false:
+	if GlobalStats.money >= unlockCost and GlobalStats.get(lockedName) == false:
 		GlobalStats.money -= unlockCost
 		GlobalStats.set(lockedName, true)
+		plus_btn.text = "Upgrade Cost: $" + str(upgradeCost)
+		_refresh()
+	
+	if GlobalStats.money >= upgradeCost and global_var_max == "spawn":
+		if level >= max_level:
+			return
+		level +=1
+		GlobalStats.set(global_var, GlobalStats.get(global_var) * 0.5)
+		GlobalStats.money -= upgradeCost
+		upgradeCost = upgradeCost * upgradeCostMultiplyer
+		plus_btn.text = "Upgrade Cost: $" + str(upgradeCost)
+		_refresh()
+	
+	if GlobalStats.money >= upgradeCost and global_var_max == "worth":
+		if level >= max_level:
+			return
+		level +=1
+		GlobalStats.set(global_var, GlobalStats.get(global_var) + 1)
+		GlobalStats.money -= upgradeCost
+		upgradeCost = upgradeCost * upgradeCostMultiplyer
 		plus_btn.text = "Upgrade Cost: $" + str(upgradeCost)
 		_refresh()
 	
@@ -57,6 +78,6 @@ func _refresh() -> void:
 		var r := segments.get_child(i) as ColorRect
 		if GlobalStats.get(lockedName) == false:
 			r.color = locked_color
-		if GlobalStats.get(lockedName) == true:
+		else:
 			r.color = filled_color if i < level else empty_color
 	plus_btn.disabled = (level >= max_level)

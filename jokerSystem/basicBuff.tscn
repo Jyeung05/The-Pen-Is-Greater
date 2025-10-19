@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuhq7pun0o7tn"]
+
+[ext_resource type="Script" uid="uid://dpt8vmfq234wj" path="res://jokerSystem/basic_buff.gd" id="1_es60n"]
+
+[node name="BasicBuff" type="Node2D"]
+script = ExtResource("1_es60n")

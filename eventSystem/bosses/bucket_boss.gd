@@ -7,7 +7,8 @@ var description = "Collects balls in a bucket"
 func action() -> void:
 	var xOff = randi_range(-1000,1000)
 	var yOff = randi_range(-1000,1000)
-	var p:Array = [Vector2(-1500.0 + xOff,-500 + yOff), Vector2(-1000 + xOff ,500+ yOff), Vector2(1000 + xOff ,500+ yOff), Vector2(1500 + xOff,-500+ yOff)]
+	var p:Array = [Vector2(-1500.0 + xOff,-500 + yOff), Vector2(-1000 + xOff ,500+ yOff),
+	 Vector2(1000 + xOff ,500+ yOff), Vector2(1500 + xOff,-500+ yOff)]
 	
 	var line = Line2D.new()
 	line.points = p  # Fixed: remove brackets

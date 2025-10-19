@@ -4,9 +4,9 @@ class_name scoreBasket
 enum mode {SCORE, HURT, BONUS}
 @export var currentMode = mode.SCORE
 @export var damage: float = 1
-@export var moneyAddAmount: int = 1
-@export var moneyMult: int =1 
-@export var id: int
+var moneyAddAmount: int = GlobalStats.asteroidWorth
+@export var moneyMult: int = 1 
+@export var id: int = 1
 var label
 
 func _ready() -> void:

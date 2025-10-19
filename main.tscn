@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c4co1nimq33tj"]
+[gd_scene load_steps=13 format=3 uid="uid://c4co1nimq33tj"]
 
 [ext_resource type="PackedScene" uid="uid://jmylugx6rska" path="res://World/World.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://cfv4oong4e0e5" path="res://main.gd" id="1_h2yge"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://bh0wscstt8sjq" path="res://eventSystem/boss_spawner_2d.tscn" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://n4s8ai2rse5n" path="res://shop_ui.gd" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://th2cgmnxdii0" path="res://upgrade_bar.tscn" id="8_5vw27"]
+[ext_resource type="PackedScene" uid="uid://cvqyukum27a0q" path="res://eventSystem/permEvents/permEventsController.tscn" id="9_kek77"]
+[ext_resource type="PackedScene" uid="uid://jdcvygq6cqh2" path="res://jokerSystem/buffController.tscn" id="10_4c57u"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_272bh"]
 
@@ -120,5 +122,9 @@ offset_bottom = -1110.0
 theme_override_font_sizes/font_size = 200
 toggle_mode = true
 text = "SHOP"
+
+[node name="PermEventsController" parent="." instance=ExtResource("9_kek77")]
+
+[node name="BuffController" parent="." instance=ExtResource("10_4c57u")]
 
 [connection signal="toggled" from="shopUI/openShop" to="shopUI" method="_on_open_shop_toggled"]

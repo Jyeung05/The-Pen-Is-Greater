@@ -23,7 +23,7 @@ func activate():
 		collisionShape.shape = circleShape
 		
 		var sprite = Sprite2D.new()
-		var texture = createCircleTexture(200, Color.YELLOW)
+		var texture = createCircleTexture(100, Color.YELLOW)
 		sprite.texture = texture
 		
 		circleBody.add_child(collisionShape)

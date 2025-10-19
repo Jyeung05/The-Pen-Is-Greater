@@ -10,7 +10,7 @@ func _ready() -> void:
 
 func eventClock() -> void:
 	for event in events:
-		await get_tree().create_timer(20).timeout
+		await get_tree().create_timer(15).timeout
 		print("event activate")
 		event.activate()
 		GlobalStats.eventList.append(event.desc)

@@ -6,6 +6,14 @@ var bosses: Array = []
 func _ready() -> void:
 	bosses = get_children()
 	bossClock()
+
+#func _process(delta: float) -> void:
+	#if Input.is_action_just_pressed("pen1"):
+		#bosses[3].activate()
+		#await get_tree().create_timer(5, false).timeout  # Added pause-aware parameter
+		#bosses[3].deactivate()
+
+
 	
 func bossClock() -> void:
 	while true:

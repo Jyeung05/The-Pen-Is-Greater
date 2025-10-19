@@ -5,6 +5,7 @@ var rng = RandomNumberGenerator.new()
 var currentAsteroid
 @export var asteroidSize = Vector2(1,1)
 @onready var asteroidScene: PackedScene = preload("res://Space Objects/Asteroid.tscn")
+@export var spawnHeight = -4000
 
 func _ready() -> void:
 	rng.randomize()
@@ -20,7 +21,7 @@ func spawnAsteroids():
 		
 		asteroid.changeGravity(gravityChange)
 		
-		asteroid.global_position = Vector2(rng.randf_range(-200, 200), rng.randf_range(-4000.0, -3500))
+		asteroid.global_position = Vector2(rng.randf_range(-200, 200), rng.randf_range(spawnHeight, spawnHeight + 500))
 		var spread = deg_to_rad(20.0)
 		asteroid.dir = Vector2.DOWN.rotated(rng.randf_range(-spread, spread))
 
@@ -29,4 +30,28 @@ func spawnAsteroids():
 
 func setGravity(amount):
 	gravityChange = amount
+	
+	
+func gravityAsteroid():
+	for n in get_children():
+		if n is Asteroid:
+			n.changeGravity(gravityChange)
+			
+func flipSpawn():
+	self.spawnHeight = spawnHeight * -1
+	setGravity(self.gravityChange * -1)
+	gravityAsteroid()
+	var world = get_child(0)
+	var baskets = world.getBaskets()
+	for b:Node2D in baskets:
+		b.global_position = Vector2(b.global_position.x, -b.global_position.y - 1000)
+	
+func unflipSpawn():
+	self.spawnHeight = spawnHeight * -1
+	setGravity(self.gravityChange * -1)
+	gravityAsteroid()
+	var world = get_child(0)
+	var baskets = world.getBaskets()
+	for b:Node2D in baskets:
+		b.global_position = Vector2(b.global_position.x, -b.global_position.y + 1000)
 	

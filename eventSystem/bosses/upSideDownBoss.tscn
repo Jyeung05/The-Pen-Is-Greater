@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://docqukyu0g2h2"]
+
+[ext_resource type="Script" uid="uid://dw4b04gig0mdb" path="res://eventSystem/bosses/up_side_down_boss.gd" id="1_ncu1p"]
+
+[node name="UpSideDownBoss" type="Node2D"]
+script = ExtResource("1_ncu1p")

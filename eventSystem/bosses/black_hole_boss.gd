@@ -1,7 +1,7 @@
 extends boss
 
 var bossName = "\"The Twins\""
-var description = "Two black holes to appear!"
+var description = "Two black holes appear!"
 
 var blackHoleScene = preload("res://eventSystem/bosses/black_hole.tscn")
 

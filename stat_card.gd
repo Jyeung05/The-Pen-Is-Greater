@@ -8,12 +8,16 @@ class_name StatCard
 
 @export var filled_color: Color = Color("#3ddc84")
 @export var empty_color: Color = Color("#263238")
+@export var locked_color: Color = Color.BLACK
 
 @export var global_var_max: StringName = &"basicEnergyMax"
 @export var global_var: StringName = &"basicEnergy"
+@export var lockedName: StringName = &"empty"
 @export var upgrade_step: int = 1000
 @export var upgradeCostMultiplyer: int = 2
 @export var upgradeCost: int = 3
+
+@export var unlockCost: int = 0
 
 @onready var name_label: Label = $VBoxContainer/nameLabel
 @onready var plus_btn: Button = $VBoxContainer/HBoxContainer2/plusButton
@@ -23,10 +27,14 @@ func _ready() -> void:
 	name_label.text = display_name
 	plus_btn.pressed.connect(_on_plus)
 	_refresh()
-	plus_btn.text = "Upgrade Cost: " + str(upgradeCost)
+	if GlobalStats.get(lockedName) == false:
+		plus_btn.text = "Unlock for: $" + str(unlockCost)
+	else:
+		plus_btn.text = "Upgrade Cost: $" + str(upgradeCost)
+	print(GlobalStats.get(lockedName))
 
 func _on_plus() -> void:
-	if GlobalStats.money > upgradeCost:
+	if GlobalStats.money > upgradeCost and GlobalStats.get(lockedName) == true:
 		if level >= max_level:
 			return
 		level += 1
@@ -34,12 +42,21 @@ func _on_plus() -> void:
 		GlobalStats.set(global_var_max, GlobalStats.get(global_var_max) + upgrade_step)
 		GlobalStats.money -= upgradeCost
 		upgradeCost = upgradeCost * upgradeCostMultiplyer
-		plus_btn.text = "Upgrade Cost: " + str(upgradeCost)
+		plus_btn.text = "Upgrade Cost: $" + str(upgradeCost)
 		_refresh()
-		
+	
+	if GlobalStats.money > unlockCost and GlobalStats.get(lockedName) == false:
+		GlobalStats.money -= unlockCost
+		GlobalStats.set(lockedName, true)
+		plus_btn.text = "Upgrade Cost: $" + str(upgradeCost)
+		_refresh()
+	
 
 func _refresh() -> void:
 	for i in range(segments.get_child_count()):
 		var r := segments.get_child(i) as ColorRect
-		r.color = filled_color if i < level else empty_color
+		if GlobalStats.get(lockedName) == false:
+			r.color = locked_color
+		if GlobalStats.get(lockedName) == true:
+			r.color = filled_color if i < level else empty_color
 	plus_btn.disabled = (level >= max_level)

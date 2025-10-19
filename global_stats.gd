@@ -9,8 +9,14 @@ var currentPen = penType.basic
 
 @export var ante: int = 300
 
+@export var basicUnlocked: bool = true
+@export var bounceUnlocked: bool = false
+@export var phaseUnlocked: bool = false
+@export var profitUnlocked: bool = false
+
+
 @export var basicEnergyMax: int = 20000
-@export var bounceEnergyMax: int =20000
+@export var bounceEnergyMax: int = 20000
 @export var phaseEnergyMax: int = 10000
 @export var profitEnergyMax: int = 10000
 

@@ -7,7 +7,7 @@ func _ready() -> void:
 	
 func activate():
 	var increase = GlobalStats.buffList.size() * 0.7
-	self.desc = "+x0.3 mult for each pockets for each buff (" + str(increase) + ")"
+	self.desc = "+x0.7 mult for each pockets for each buff (" + str(increase) + ")"
 	var baskets = get_parent().getWorld().getBaskets()
 	for b in baskets:
 		b.moneyMult += increase

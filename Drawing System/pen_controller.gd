@@ -14,13 +14,13 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pen1"):
 		GlobalStats.currentPen = GlobalStats.penType.basic
 		selection(1)
-	elif Input.is_action_just_pressed("pen2"):
+	elif Input.is_action_just_pressed("pen2") and GlobalStats.bounceUnlocked == true:
 		GlobalStats.currentPen = GlobalStats.penType.elastic
 		selection(2)
-	elif Input.is_action_just_pressed("pen3"):
+	elif Input.is_action_just_pressed("pen3") and GlobalStats.phaseUnlocked == true:
 		GlobalStats.currentPen = GlobalStats.penType.phase
 		selection(3)
-	elif Input.is_action_just_pressed("pen4"):
+	elif Input.is_action_just_pressed("pen4") and GlobalStats.profitUnlocked == true:
 		GlobalStats.currentPen = GlobalStats.penType.profit
 		selection(4)
 	elif Input.is_action_just_pressed("undo"):

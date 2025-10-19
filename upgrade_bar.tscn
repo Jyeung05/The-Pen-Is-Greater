@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=3 uid="uid://th2cgmnxdii0"]
+
+[ext_resource type="Script" uid="uid://klu54yi2yx5e" path="res://upgrade_bar.gd" id="1_ifrep"]
+[ext_resource type="PackedScene" uid="uid://d12b5hoye5ptd" path="res://stat_card.tscn" id="2_8twcv"]
+
+[node name="upgradeBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ifrep")
+
+[node name="HBoxContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 6.46181
+anchor_bottom = 6.47685
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 695
+columns = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="statCard2" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
+layout_mode = 2
+display_name = "Basic Pen"
+filled_color = Color(1, 1, 0, 1)
+lockedName = &"basicUnlocked"
+
+[node name="statCard" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
+layout_mode = 2
+display_name = "Bouncy Pen"
+filled_color = Color(1, 0, 0, 1)
+global_var_max = &"bounceEnergyMax"
+global_var = &"bounceEnergy"
+lockedName = &"bounceUnlocked"
+upgradeCost = 10
+unlockCost = 5
+
+[node name="statCard3" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
+layout_mode = 2
+display_name = "Phase Pen"
+filled_color = Color(0, 1, 0, 1)
+global_var_max = &"phaseEnergyMax"
+global_var = &"phaseEnergy"
+lockedName = &"phaseUnlocked"
+upgradeCost = 15
+unlockCost = 30
+
+[node name="statCard4" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
+layout_mode = 2
+display_name = "Profit Pen"
+filled_color = Color(0.332181, 0.819431, 0.83259, 1)
+global_var_max = &"profitEnergyMax"
+global_var = &"profitEnergy"
+lockedName = &"profitUnlocked"
+upgradeCost = 25
+unlockCost = 50
+
+[node name="statCard5" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
+layout_mode = 2
+display_name = "Increase Spawn Rate"
+
+[node name="statCard6" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
+layout_mode = 2
+display_name = "Increase Score Profits"
+
+[node name="statCard7" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
+layout_mode = 2
+display_name = "unassigned"
+
+[node name="statCard8" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
+layout_mode = 2
+display_name = "unassigned"
+
+[node name="pointsLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2

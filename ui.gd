@@ -2,7 +2,7 @@ extends Control
 
 
 func _process(delta: float) -> void:
-	$moneyLabel.text = "Money: " + str(GlobalStats.money)
+	$moneyLabel.text = str(GlobalStats.money)
 	$healthLabel.text = "Health: " + str(int(GlobalStats.health)) 
 	$anteLabel.text = "Ante: " + str(GlobalStats.ante)
 	$eventLabel.text = "Events: " + eventListToString()
@@ -15,8 +15,7 @@ func eventListToString() -> String:
 		s = s + line +"\n"
 	return s
 func _ready() -> void:
-	$moneyLabel.add_theme_font_size_override("font_size", 200)
-	$healthLabel.add_theme_font_size_override("font_size", 200)
+	pass
 	$anteLabel.add_theme_font_size_override("font_size", 200)
 	$eventLabel.add_theme_font_size_override("font_size", 100)
 

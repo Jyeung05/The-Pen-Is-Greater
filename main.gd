@@ -14,6 +14,8 @@ func _ready() -> void:
 
 func spawnAsteroids():
 	while true:
+		while get_tree().paused:
+			await get_tree().process_frame
 		var asteroid := asteroidScene.instantiate() as Asteroid
 		
 		

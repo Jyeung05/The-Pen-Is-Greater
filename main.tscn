@@ -19,11 +19,11 @@ texture = SubResource("CanvasTexture_272bh")
 [node name="Main" type="Node2D"]
 process_mode = 1
 script = ExtResource("1_h2yge")
-metadata/_edit_horizontal_guides_ = [-2262.0]
-metadata/_edit_vertical_guides_ = [2759.0]
+metadata/_edit_horizontal_guides_ = [-3011.0]
+metadata/_edit_vertical_guides_ = [2759.0, -6252.0, -4627.0]
 
 [node name="World" parent="." instance=ExtResource("1_0xm2m")]
-position = Vector2(-19, -490)
+position = Vector2(8, -423)
 
 [node name="basicDrawings" parent="." instance=ExtResource("3_h2yge")]
 
@@ -40,10 +40,12 @@ script = ExtResource("4_lquwl")
 
 [node name="eventLabel" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = -4097.0
-offset_top = -1632.0
-offset_right = -2893.0
-offset_bottom = -1023.0
+offset_left = -6249.0
+offset_top = -2939.0
+offset_right = -4626.0
+offset_bottom = -617.0
+theme_override_font_sizes/font_size = 200
+autowrap_mode = 3
 
 [node name="moneyLabel" type="Label" parent="Control"]
 layout_mode = 0
@@ -79,10 +81,11 @@ offset_bottom = -1470.0
 
 [node name="buffLabel" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = -4023.0
-offset_top = -515.0
-offset_right = -2819.0
-offset_bottom = 94.0
+offset_left = -6263.0
+offset_top = -319.0
+offset_right = -4640.0
+offset_bottom = 1772.0
+autowrap_mode = 3
 
 [node name="anteCountdown" type="Label" parent="Control"]
 layout_mode = 0
@@ -91,6 +94,17 @@ offset_top = -3125.0
 offset_right = -2934.0
 offset_bottom = -2579.0
 theme_override_font_sizes/font_size = 250
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 4307.0
+offset_top = 1776.0
+offset_right = 5568.0
+offset_bottom = 2813.0
+theme_override_font_sizes/font_size = 200
+text = "Left click to draw
+
+Right click to erase"
 
 [node name="penController" parent="." instance=ExtResource("4_1bvp3")]
 

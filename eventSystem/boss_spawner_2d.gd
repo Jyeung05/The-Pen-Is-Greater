@@ -35,7 +35,6 @@ func bossClock() -> void:
 		var eventListPoint = 0
 		while !response:
 			print("spawning boss")
-			$AudioStreamPlayer.play()
 			var rng = RandomNumberGenerator.new()
 			select = rng.randi_range(0, bosses.size() - 1)
 			if reFlag:

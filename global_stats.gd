@@ -7,17 +7,17 @@ extends Node
 enum penType {basic, elastic, phase, profit, NONE}
 var currentPen = penType.basic
 
-@export var ante: int = 50
+@export var ante: int = 5
 
 @export var basicUnlocked: bool = true
 @export var bounceUnlocked: bool = false
 @export var phaseUnlocked: bool = false
 @export var profitUnlocked: bool = false
 
-@export var basicEnergyMax: int = 5000
-@export var bounceEnergyMax: int = 5000
-@export var phaseEnergyMax: int = 2500
-@export var profitEnergyMax: int = 2500
+@export var basicEnergyMax: int = 2000
+@export var bounceEnergyMax: int = 2000
+@export var phaseEnergyMax: int = 1000
+@export var profitEnergyMax: int = 1000
 
 @export var basicEnergy: int = basicEnergyMax
 @export var bounceEnergy: int = bounceEnergyMax
@@ -70,6 +70,10 @@ func restart():
 	bounceEnergyMax = RbounceEnergyMax
 	phaseEnergyMax = RphaseEnergyMax
 	profitEnergyMax = RprofitEnergyMax
+	basicEnergy = RbasicEnergyMax
+	bounceEnergy = RbounceEnergyMax
+	phaseEnergy = phaseEnergyMax
+	profitEnergy = profitEnergyMax
 	distrabution = [1,1,1,1,1,1,1]
 	eventList = []
 	buffList = []

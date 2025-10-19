@@ -15,15 +15,17 @@ func _process(delta: float) -> void:
 func goal() -> void:
 	GlobalStats.anteCountDown = 30
 	while true:
-		while GlobalStats.anteCountDown > 0:
-			await get_tree().create_timer(1, false).timeout
-			GlobalStats.anteCountDown = GlobalStats.anteCountDown - 1
-		if GlobalStats.money < GlobalStats.ante:
+		await get_tree().create_timer(1, false).timeout
+		GlobalStats.anteCountDown = GlobalStats.anteCountDown - 1
+		if GlobalStats.money < GlobalStats.ante and GlobalStats.anteCountDown <= 0:
+			$sounds/lose.play()
 			$loseScreen.visible = true
+			await get_tree().create_timer(99999, false).timeout
 			
-		else:
+		elif GlobalStats.anteCountDown == 1 and GlobalStats.money > GlobalStats.ante:
 			GlobalStats.ante = GlobalStats.ante * 2
 			GlobalStats.anteCountDown = 30
+			$sounds/anteUp.play()
 
 func getBaskets():
 	var children = get_children()

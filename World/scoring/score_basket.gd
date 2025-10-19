@@ -44,10 +44,12 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	GlobalStats.distrabution[id - 1] += 1
 	if currentMode == mode.SCORE:
 		GlobalStats.money += money()
+		$score.play()
 	elif currentMode == mode.HURT:
 		GlobalStats.health = GlobalStats.health - damage
 	elif currentMode == mode.BONUS:
 		GlobalStats.money = GlobalStats.money + money() + 3
+		$score.play()
 		
 func money() -> int:
 	var distrabution = GlobalStats.distrabution

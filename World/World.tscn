@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://jmylugx6rska"]
+[gd_scene load_steps=10 format=3 uid="uid://jmylugx6rska"]
 
 [ext_resource type="Script" uid="uid://dtsb547aq6hgl" path="res://World/world.gd" id="1_y6flb"]
+[ext_resource type="AudioStream" uid="uid://cgepqf8dygntm" path="res://sounds/lose.mp3" id="2_04mge"]
 [ext_resource type="Texture2D" uid="uid://oj0xqvjttydo" path="res://World/background.png" id="2_y6flb"]
+[ext_resource type="AudioStream" uid="uid://c6t1t6clppp6s" path="res://sounds/anteUp.mp3" id="3_eue43"]
 [ext_resource type="PackedScene" uid="uid://b7seingnk07jd" path="res://World/scoring/score_basket.tscn" id="3_mlekv"]
 [ext_resource type="PackedScene" uid="uid://bhrbnx5wk3h0f" path="res://World/lose_screen.tscn" id="4_il6x7"]
 
@@ -21,6 +23,14 @@ size = Vector2(887.25, 7250)
 [node name="World" type="Node2D"]
 script = ExtResource("1_y6flb")
 metadata/_edit_horizontal_guides_ = [2534.0]
+
+[node name="sounds" type="Node" parent="."]
+
+[node name="lose" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource("2_04mge")
+
+[node name="anteUp" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource("3_eue43")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_y6flb")
@@ -54,7 +64,7 @@ offset_left = -11590.0
 offset_top = -4194.0
 offset_right = -4113.0
 offset_bottom = 4590.0
-color = Color(0.287469, 0.278987, 0.279128, 1)
+color = Color(0.156863, 0.14902, 0.14902, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
 visible = false
@@ -70,7 +80,7 @@ offset_left = 4113.0
 offset_top = -4314.0
 offset_right = 11792.0
 offset_bottom = 4779.0
-color = Color(0.286275, 0.278431, 0.278431, 1)
+color = Color(0.154983, 0.149989, 0.14999, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 visible = false

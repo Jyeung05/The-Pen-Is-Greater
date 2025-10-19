@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalStats="*res://global_stats.gd"
+GameSong="*res://game_song.tscn"
 
 [dotnet]
 

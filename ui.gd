@@ -5,8 +5,8 @@ func _process(delta: float) -> void:
 	$moneyLabel.text = "Score: " + str(GlobalStats.money)
 	$healthLabel.text = "Health: " + str(int(GlobalStats.health)) 
 	$anteLabel.text = "Score Needed: " + str(GlobalStats.ante)
-	$eventLabel.text = "Events: " + eventListToString()
-	$buffLabel.text = "Buffs: " + buffListToString()
+	$eventLabel.text = "Events: \n" + eventListToString()
+	$buffLabel.text = "Buffs: \n" + buffListToString()
 	$anteCountdown.text = "Time Remaining: " + str(GlobalStats.anteCountDown)
 	inkBar()
 	

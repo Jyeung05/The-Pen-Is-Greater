@@ -7,6 +7,7 @@ var currentBoss = 0
 var reFlag = false
 func _ready() -> void:
 	bosses = get_children()
+	bosses = bosses.filter(func(boss): return boss.has_method("activate"))
 	bossClock()
 
 func _process(delta: float) -> void:

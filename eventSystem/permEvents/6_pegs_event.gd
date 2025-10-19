@@ -1,5 +1,5 @@
 extends Node2D
-var desc = "10 pegs to block your path"
+var desc = "pegs block your path"
 var bounceForce: float = 500.0
 
 func activate():

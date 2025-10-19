@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://jmylugx6rska"]
+[gd_scene load_steps=8 format=3 uid="uid://jmylugx6rska"]
 
 [ext_resource type="Script" uid="uid://dtsb547aq6hgl" path="res://World/world.gd" id="1_y6flb"]
 [ext_resource type="Texture2D" uid="uid://oj0xqvjttydo" path="res://World/background.png" id="2_y6flb"]
 [ext_resource type="PackedScene" uid="uid://b7seingnk07jd" path="res://World/scoring/score_basket.tscn" id="3_mlekv"]
+[ext_resource type="PackedScene" uid="uid://bhrbnx5wk3h0f" path="res://World/lose_screen.tscn" id="4_il6x7"]
 
 [sub_resource type="Environment" id="Environment_y6flb"]
 background_mode = 3
@@ -49,7 +50,7 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="ColorRect" type="ColorRect" parent="RigidBody2D2"]
-offset_left = -5000.0
+offset_left = -11590.0
 offset_top = -4194.0
 offset_right = -4113.0
 offset_bottom = 4590.0
@@ -67,7 +68,7 @@ collision_mask = 0
 [node name="ColorRect" type="ColorRect" parent="RigidBody2D"]
 offset_left = 4113.0
 offset_top = -4314.0
-offset_right = 5000.0
+offset_right = 11792.0
 offset_bottom = 4779.0
 color = Color(0.286275, 0.278431, 0.278431, 1)
 
@@ -102,3 +103,14 @@ id = 4
 [node name="scoreBasket3" parent="." instance=ExtResource("3_mlekv")]
 position = Vector2(-1696, 2544)
 id = 3
+
+[node name="loseScreen" parent="." instance=ExtResource("4_il6x7")]
+visible = false
+offset_left = -1500.0
+offset_top = -1000.0
+offset_right = -1500.0
+offset_bottom = -1000.0
+
+[connection signal="pressed" from="loseScreen/Button" to="." method="_on_button_pressed"]
+
+[editable path="loseScreen"]

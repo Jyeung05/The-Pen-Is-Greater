@@ -45,12 +45,14 @@ func _on_plus() -> void:
 		upgradeCost = upgradeCost * upgradeCostMultiplyer
 		plus_btn.text = "Upgrade Cost: $" + str(upgradeCost)
 		_refresh()
+		$upgrade.play()
 	
 	if GlobalStats.money >= unlockCost and GlobalStats.get(lockedName) == false:
 		GlobalStats.money -= unlockCost
 		GlobalStats.set(lockedName, true)
 		plus_btn.text = "Upgrade Cost: $" + str(upgradeCost)
 		_refresh()
+		$upgrade.play()
 	
 	if GlobalStats.money >= upgradeCost and global_var_max == "spawn":
 		if level >= max_level:
@@ -61,6 +63,7 @@ func _on_plus() -> void:
 		upgradeCost = upgradeCost * upgradeCostMultiplyer
 		plus_btn.text = "Upgrade Cost: $" + str(upgradeCost)
 		_refresh()
+		$upgrade.play()
 	
 	if GlobalStats.money >= upgradeCost and global_var_max == "worth":
 		if level >= max_level:
@@ -71,6 +74,7 @@ func _on_plus() -> void:
 		upgradeCost = upgradeCost * upgradeCostMultiplyer
 		plus_btn.text = "Upgrade Cost: $" + str(upgradeCost)
 		_refresh()
+		$upgrade.play()
 
 	if GlobalStats.money >= upgradeCost and global_var_max == "buffMax":
 		if level >= max_level:
@@ -81,6 +85,7 @@ func _on_plus() -> void:
 		upgradeCost = upgradeCost * upgradeCostMultiplyer
 		plus_btn.text = "Upgrade Cost: $" + str(upgradeCost)
 		_refresh()
+		$upgrade.play()
 
 func _refresh() -> void:
 	for i in range(segments.get_child_count()):

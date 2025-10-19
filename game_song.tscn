@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsq2owvvdvia3"]
+
+[ext_resource type="AudioStream" uid="uid://thlkaub3ugaw" path="res://sounds/ambient-game-67014.mp3" id="1_ogtys"]
+[ext_resource type="Script" uid="uid://6hxl1seahheb" path="res://game_song.gd" id="2_wmag4"]
+
+[node name="gameSong" type="AudioStreamPlayer"]
+process_mode = 3
+stream = ExtResource("1_ogtys")
+script = ExtResource("2_wmag4")

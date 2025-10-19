@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d12b5hoye5ptd"]
+[gd_scene load_steps=3 format=3 uid="uid://d12b5hoye5ptd"]
 
 [ext_resource type="Script" uid="uid://dupig141bxof" path="res://stat_card.gd" id="1_7lonh"]
+[ext_resource type="AudioStream" uid="uid://xeobbn5m8ody" path="res://sounds/upgrade.mp3" id="2_fisqh"]
 
 [node name="statCard" type="Control"]
 custom_minimum_size = Vector2(220, 110)
@@ -85,3 +86,6 @@ layout_mode = 2
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 200
 text = " 123 + "
+
+[node name="upgrade" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_fisqh")

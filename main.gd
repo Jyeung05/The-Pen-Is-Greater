@@ -6,12 +6,20 @@ var currentAsteroid
 @export var asteroidSize = Vector2(1,1)
 @onready var asteroidScene: PackedScene = preload("res://Space Objects/Asteroid.tscn")
 @export var spawnHeight = -4000
+var reCounter = GlobalStats.restartCounter
+
 
 func _ready() -> void:
 	rng.randomize()
 	currentAsteroid = asteroidScene
 	spawnAsteroids()
 
+#func _process(delta: float) -> void:
+	if reCounter < GlobalStats.restartCounter:
+		for c in get_children():
+			if c is Asteroid:
+				c.die()
+		
 func spawnAsteroids():
 	while true:
 		while get_tree().paused:

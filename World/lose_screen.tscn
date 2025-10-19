@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bhrbnx5wk3h0f"]
+[gd_scene load_steps=0 format=3 uid="uid://bhrbnx5wk3h0f"]
 
 [node name="loseScreen" type="Control"]
 layout_mode = 3

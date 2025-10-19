@@ -10,3 +10,5 @@ func activate():
 		if b.id % 2 == 1:
 			b.moneyAddAmount += 2
 	
+func deactivate():
+	pass

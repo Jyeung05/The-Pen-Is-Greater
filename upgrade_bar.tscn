@@ -76,6 +76,8 @@ display_name = "Special Buff"
 global_var_max = &"buffMax"
 global_var = &"buffAmount"
 lockedName = &"Special Buff"
+upgradeCostMultiplyer = 10
+upgradeCost = 10
 
 [node name="pointsLabel" type="Label" parent="HBoxContainer"]
 layout_mode = 2

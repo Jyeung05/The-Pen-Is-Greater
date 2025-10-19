@@ -8,9 +8,13 @@ func _ready() -> void:
 	pass
 	
 	
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("restart"):
+		GlobalStats.restart()
+
 func goal() -> void:
 	while true:
-		await get_tree().create_timer(20).timeout
+		await get_tree().create_timer(500, false).timeout
 		if GlobalStats.money < GlobalStats.ante:
 			$loseScreen.visible = true
 			

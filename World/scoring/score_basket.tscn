@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7seingnk07jd"]
 
 [ext_resource type="Script" uid="uid://cislxalswbjqs" path="res://World/scoring/score_basket.gd" id="1_hq5pr"]
-[ext_resource type="Script" path="res://World/scoring/basketControl.gd" id="2_3rkkq"]
+[ext_resource type="Script" uid="uid://dmsjb83158eki" path="res://World/scoring/basketControl.gd" id="2_3rkkq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hq5pr"]
 size = Vector2(1090, 657.5)

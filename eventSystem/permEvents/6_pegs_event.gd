@@ -73,3 +73,6 @@ func createCircleTexture(radius: float, color: Color) -> ImageTexture:
 				img.set_pixel(x, y, color)
 	
 	return ImageTexture.create_from_image(img)
+func deactivate():
+	for c in get_children():
+		c.queue_free()

@@ -7,7 +7,7 @@ extends Node
 enum penType {basic, elastic, phase, profit, NONE}
 var currentPen = penType.basic
 
-@export var ante: int = 300
+@export var ante: int = 50
 
 @export var basicUnlocked: bool = true
 @export var bounceUnlocked: bool = false
@@ -35,6 +35,7 @@ var currentPen = penType.basic
 @export var spawnCooldown: float = 3
 @export var asteroidWorth: int = 1
 
+@export var restartCounter = 0
 # RESTART VARIABLES
 
 var Rhealth: float = health
@@ -49,7 +50,6 @@ var RbasicEnergyMax: int = basicEnergyMax
 var RbounceEnergyMax: int = bounceEnergyMax
 var RphaseEnergyMax: int = phaseEnergyMax
 var RprofitEnergyMax: int = profitEnergyMax
-var Rdistrabution:Array = distrabution
 var ReventList:Array = eventList
 var RbuffList:Array = buffList
 var RspawnCooldown: float = spawnCooldown
@@ -58,7 +58,7 @@ var RasteroidWorth: int = asteroidWorth
 
 func restart():
 	health = Rhealth
-	money = Rmoney
+	money = 0
 	gravity = Rgravity
 	ante = Rante
 	basicUnlocked = RbasicUnlocked
@@ -69,8 +69,9 @@ func restart():
 	bounceEnergyMax = RbounceEnergyMax
 	phaseEnergyMax = RphaseEnergyMax
 	profitEnergyMax = RprofitEnergyMax
-	distrabution = Rdistrabution
-	eventList = ReventList
-	buffList = RbuffList
+	distrabution = [1,1,1,1,1,1,1]
+	eventList = []
+	buffList = []
 	spawnCooldown = RspawnCooldown
 	asteroidWorth = RasteroidWorth
+	restartCounter += 1

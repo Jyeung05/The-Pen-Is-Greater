@@ -25,7 +25,6 @@ func _process(delta: float) -> void:
 		return
 	if Input.is_action_just_pressed("mouseClick"):
 		startNew()
-		print(get_global_mouse_position())
 		currentEnergy = getEnergy()  # Use getter function
 		points.append(get_global_mouse_position())
 		

@@ -8,12 +8,18 @@ var moneyAddAmount: int =  GlobalStats.asteroidWorth
 @export var moneyMult: float = 1.0
 @export var id: int = 1
 var label
+var reCounter = GlobalStats.restartCounter
 
 func _ready() -> void:
 	label = $Control
 	
 func _process(delta: float) -> void:
-	pass
+	if reCounter > GlobalStats.restartCounter:
+		currentMode = mode.SCORE
+		moneyAddAmount = GlobalStats.asteroidWorth
+		moneyMult = 1
+		$colorRect.color = Color("f8001d")
+		reCounter += 1
 	
 	
 func switchMode():
@@ -49,8 +55,16 @@ func money() -> int:
 	for val in distrabution:
 		sum += val
 	var average = sum/7
+	print(sum)
+	print(moneyAddAmount)
+	print(moneyMult)
 	var cash = int( ceil((float(average)/float(distrabution[id -1])) * moneyAddAmount  * moneyMult))
-	return min(cash,1)
+	print(cash)
+	return max(cash,1)
 
 func mutateMult(i:int):
 	self.moneyMult = i
+
+func returnToScore():
+	if self.currentMode == mode.BONUS:
+		bonusSwitcher()

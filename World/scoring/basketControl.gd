@@ -3,7 +3,7 @@ extends Control
 var id
 
 func _process(delta: float) -> void:
-	$Label.text = "" + str(GlobalStats.distrabution[id -1 ])
+	$Label.text = "" + str(GlobalStats.distrabution[int(id - 1 )])
 
 
 

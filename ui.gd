@@ -2,11 +2,12 @@ extends Control
 
 
 func _process(delta: float) -> void:
-	$moneyLabel.text = str(GlobalStats.money)
+	$moneyLabel.text = "Score: " + str(GlobalStats.money)
 	$healthLabel.text = "Health: " + str(int(GlobalStats.health)) 
-	$anteLabel.text = "Ante: " + str(GlobalStats.ante)
+	$anteLabel.text = "Score Needed: " + str(GlobalStats.ante)
 	$eventLabel.text = "Events: " + eventListToString()
 	$buffLabel.text = "Buffs: " + buffListToString()
+	$anteCountdown.text = "Time Remaining: " + str(GlobalStats.anteCountDown)
 	inkBar()
 	
 func buffListToString() -> String:

@@ -14,11 +14,11 @@ func _ready() -> void:
 	label = $Control
 	
 func _process(delta: float) -> void:
-	if reCounter > GlobalStats.restartCounter:
+	if reCounter < GlobalStats.restartCounter:
 		currentMode = mode.SCORE
 		moneyAddAmount = GlobalStats.asteroidWorth
 		moneyMult = 1
-		$colorRect.color = Color("f8001d")
+		$ColorRect.color = Color("8bd689")
 		reCounter += 1
 	
 	

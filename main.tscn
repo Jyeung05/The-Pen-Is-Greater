@@ -38,6 +38,15 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("4_lquwl")
 
+[node name="Label2" type="Label" parent="Control"]
+offset_left = 4161.0
+offset_top = 397.0
+offset_right = 5713.0
+offset_bottom = 1549.0
+theme_override_font_sizes/font_size = 200
+text = "Press 1,2,3, or 4 
+to switch pens"
+
 [node name="eventLabel" type="Label" parent="Control"]
 layout_mode = 0
 offset_left = -6249.0

@@ -28,6 +28,13 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("4_lquwl")
 
+[node name="eventLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -4097.0
+offset_top = -1632.0
+offset_right = -2893.0
+offset_bottom = -1023.0
+
 [node name="moneyLabel" type="Label" parent="Control"]
 layout_mode = 0
 offset_left = 2759.0
@@ -37,9 +44,9 @@ offset_bottom = -1538.0
 
 [node name="healthLabel" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 2758.0
+offset_left = 2757.0
 offset_top = -1503.0
-offset_right = 3838.0
+offset_right = 3837.0
 offset_bottom = -928.0
 
 [node name="penInk" type="ProgressBar" parent="Control"]

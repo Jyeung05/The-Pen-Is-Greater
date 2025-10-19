@@ -1,6 +1,7 @@
 extends event
 #turns 1 and 7 gold
 
+var desc = "pockets 1 and 7 give bonus points"
 
 func activate():
 	var main = get_parent().get_parent()

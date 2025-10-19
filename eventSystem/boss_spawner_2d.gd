@@ -17,15 +17,19 @@ func bossClock() -> void:
 	while true:
 		var response:bool = false
 		print("boss timer start")
-		await get_tree().create_timer(40).timeout
+		await get_tree().create_timer(4).timeout
 		var select
+		var eventListPoint = 0
 		while !response:
 			print("spawning boss")
 			var rng = RandomNumberGenerator.new()
 			select = rng.randi_range(0, bosses.size() - 1)
 			response = bosses[select].activate()
+			GlobalStats.eventList.append("Boss Event: " + bosses[select].bossName + ", " + bosses[select].description)
+			eventListPoint = GlobalStats.eventList.size() - 1
 		print("despawning boss")
-		await get_tree().create_timer(20).timeout
+		await get_tree().create_timer(5).timeout
 		response = false
 		bosses[select].deactivate()
+		GlobalStats.eventList.pop_at(eventListPoint)
 		print("boss despawned")

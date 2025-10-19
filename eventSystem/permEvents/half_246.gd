@@ -1,5 +1,9 @@
 extends event
 
+var desc = "pockets 2 4 and 6 give half points"
+
+
+
 func activate():
 	var main = get_parent().get_parent()
 	var world = main.get_child(0)

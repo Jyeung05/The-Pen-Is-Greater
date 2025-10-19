@@ -12,4 +12,4 @@ script = ExtResource("1_r4bpu")
 
 [node name="blackHoleBoss" parent="." instance=ExtResource("3_nfoia")]
 
-[node name="doubleSizeBoss" parent="." instance=ExtResource("4_ry377")]
+[node name="speedBoss" parent="." instance=ExtResource("4_ry377")]

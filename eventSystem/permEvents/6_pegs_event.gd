@@ -1,5 +1,7 @@
 extends Node2D
 
+var desc = "6 pegs to block your path"
+
 func activate():
 	print("pegs")
 	var positions = [

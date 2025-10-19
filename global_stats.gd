@@ -20,3 +20,5 @@ var currentPen = penType.basic
 @export var profitEnergy: int = profitEnergyMax
 
 @onready var distrabution:Array = [1,1,1,1,1,1,1]
+
+@export var eventList:Array = []

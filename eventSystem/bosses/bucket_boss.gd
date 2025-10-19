@@ -1,7 +1,8 @@
 extends boss
 
 
-
+var bossName = "\"The Bucket\""
+var description = "Collects balls in a bucket"
 
 func action() -> void:
 	var xOff = randi_range(-500,500)

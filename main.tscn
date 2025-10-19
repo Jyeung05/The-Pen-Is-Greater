@@ -39,6 +39,7 @@ offset_bottom = 40.0
 script = ExtResource("4_lquwl")
 
 [node name="Label2" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 4161.0
 offset_top = 397.0
 offset_right = 5713.0

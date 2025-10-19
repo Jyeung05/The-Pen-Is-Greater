@@ -76,6 +76,8 @@ display_name = "Special Buff"
 global_var_max = &"buffMax"
 global_var = &"buffAmount"
 lockedName = &"Special Buff"
+upgradeCostMultiplyer = 10
+upgradeCost = 10
 
 [node name="statCard8" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
 layout_mode = 2

@@ -25,8 +25,8 @@ func eventListToString() -> String:
 func _ready() -> void:
 	pass
 	$anteLabel.add_theme_font_size_override("font_size", 200)
-	$eventLabel.add_theme_font_size_override("font_size", 100)
-	$buffLabel.add_theme_font_size_override("font_size", 100)
+	$eventLabel.add_theme_font_size_override("font_size", 175)
+	$buffLabel.add_theme_font_size_override("font_size", 175)
 
 func inkBar():
 	if GlobalStats.currentPen == GlobalStats.penType.basic:

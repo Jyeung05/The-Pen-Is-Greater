@@ -116,6 +116,7 @@ id = 3
 
 [node name="loseScreen" parent="." instance=ExtResource("4_il6x7")]
 visible = false
+top_level = true
 offset_left = -1500.0
 offset_top = -1000.0
 offset_right = -1500.0

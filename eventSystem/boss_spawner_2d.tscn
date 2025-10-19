@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bh0wscstt8sjq"]
+[gd_scene load_steps=7 format=3 uid="uid://bh0wscstt8sjq"]
 
 [ext_resource type="Script" uid="uid://u5av28lx6fl8" path="res://eventSystem/boss_spawner_2d.gd" id="1_r4bpu"]
 [ext_resource type="PackedScene" uid="uid://c74alvp0f6fry" path="res://eventSystem/bosses/bucket_boss.tscn" id="2_qcrht"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://s0k0lgp4lsdy" path="res://eventSystem/bosses/gravityBoss.tscn" id="4_ry377"]
 [ext_resource type="PackedScene" path="res://eventSystem/bosses/upSideDownBoss.tscn" id="5_k4ior"]
 [ext_resource type="PackedScene" path="res://eventSystem/bosses/fireBallBoss.tscn" id="6_p1omc"]
-[ext_resource type="AudioStream" uid="uid://cr6rsuppskmk2" path="res://sounds/eventStart.mp3" id="7_wrx54"]
 
 [node name="bossSpawner2D" type="Node2D"]
 script = ExtResource("1_r4bpu")
@@ -20,6 +19,3 @@ script = ExtResource("1_r4bpu")
 [node name="UpSideDownBoss" parent="." instance=ExtResource("5_k4ior")]
 
 [node name="FireBallBoss" parent="." instance=ExtResource("6_p1omc")]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_wrx54")

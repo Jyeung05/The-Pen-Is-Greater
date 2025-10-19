@@ -43,7 +43,7 @@ layout_mode = 0
 offset_left = -6249.0
 offset_top = -2939.0
 offset_right = -4626.0
-offset_bottom = -1082.0
+offset_bottom = -617.0
 theme_override_font_sizes/font_size = 200
 autowrap_mode = 3
 
@@ -81,10 +81,10 @@ offset_bottom = -1470.0
 
 [node name="buffLabel" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = -6251.0
-offset_top = -820.0
-offset_right = -4628.0
-offset_bottom = 1271.0
+offset_left = -6263.0
+offset_top = -319.0
+offset_right = -4640.0
+offset_bottom = 1772.0
 autowrap_mode = 3
 
 [node name="anteCountdown" type="Label" parent="Control"]

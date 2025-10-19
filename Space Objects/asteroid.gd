@@ -15,6 +15,7 @@ var velocity: Vector2
 var _was_emitting := true
 
 func _ready() -> void:
+	$Sprite2D.modulate = Color("6f4826")
 	_was_emitting = true
 	trail.emitting = true   # start as-is; no amount/alpha changes
 func _physics_process(delta: float) -> void:

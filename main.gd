@@ -19,6 +19,7 @@ func _ready() -> void:
 		for c in get_children():
 			if c is Asteroid:
 				c.die()
+		reCounter += 1
 		
 func spawnAsteroids():
 	while true:

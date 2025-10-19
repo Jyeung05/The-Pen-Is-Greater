@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b5putt3b5nwhs"]
 
 [ext_resource type="Script" uid="uid://4hdy44ukh8qb" path="res://eventSystem/bosses/black_hole.gd" id="1_dmvex"]
-[ext_resource type="Texture2D" uid="uid://cacuosdgjbp7k" path="res://blackHole.jpg" id="2_37ajs"]
+[ext_resource type="Texture2D" uid="uid://bq40wq2bsk6l8" path="res://white ball.png" id="2_v06qc"]
 [ext_resource type="Script" uid="uid://c6ao8vtmmj6ys" path="res://eventSystem/bosses/blackHoleArea.gd" id="3_v06qc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pg8i8"]
@@ -11,7 +11,8 @@ radius = 1891.29
 script = ExtResource("1_dmvex")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_37ajs")
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_v06qc")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2

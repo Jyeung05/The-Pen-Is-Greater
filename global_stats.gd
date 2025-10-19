@@ -32,7 +32,7 @@ var currentPen = penType.basic
 @export var buffAmount = 0
 @export var buffMax = 8
 
-@export var spawnCooldown: float = 3
+@export var spawnCooldown: float = 1.5
 @export var asteroidWorth: int = 1
 var anteCountDown: int = 0
 @export var restartCounter = 0
@@ -73,6 +73,6 @@ func restart():
 	distrabution = [1,1,1,1,1,1,1]
 	eventList = []
 	buffList = []
-	spawnCooldown = RspawnCooldown
+	spawnCooldown = 1.5
 	asteroidWorth = RasteroidWorth
 	restartCounter += 1

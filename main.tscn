@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c4co1nimq33tj"]
+[gd_scene load_steps=11 format=3 uid="uid://c4co1nimq33tj"]
 
 [ext_resource type="PackedScene" uid="uid://jmylugx6rska" path="res://World/World.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://cfv4oong4e0e5" path="res://main.gd" id="1_h2yge"]
@@ -6,8 +6,16 @@
 [ext_resource type="PackedScene" uid="uid://bqnqn5v3papvu" path="res://Drawing System/pen_controller.tscn" id="4_1bvp3"]
 [ext_resource type="Script" uid="uid://wt284h3s4m0i" path="res://ui.gd" id="4_lquwl"]
 [ext_resource type="PackedScene" uid="uid://bh0wscstt8sjq" path="res://eventSystem/boss_spawner_2d.tscn" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://n4s8ai2rse5n" path="res://shop_ui.gd" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://th2cgmnxdii0" path="res://upgrade_bar.tscn" id="8_5vw27"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_272bh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5vw27"]
+texture = SubResource("CanvasTexture_272bh")
 
 [node name="Main" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_h2yge")
 metadata/_edit_horizontal_guides_ = [-2262.0]
 metadata/_edit_vertical_guides_ = [2759.0]
@@ -21,6 +29,7 @@ position = Vector2(-19, -490)
 zoom = Vector2(0.2, 0.2)
 
 [node name="Control" type="Control" parent="."]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -29,12 +38,14 @@ script = ExtResource("4_lquwl")
 
 [node name="moneyLabel" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 2759.0
-offset_top = -2147.0
-offset_right = 3963.0
-offset_bottom = -1538.0
+offset_left = 4135.0
+offset_top = -2091.0
+offset_right = 4849.0
+offset_bottom = -1482.0
+theme_override_font_sizes/font_size = 250
 
 [node name="healthLabel" type="Label" parent="Control"]
+visible = false
 layout_mode = 0
 offset_left = 2758.0
 offset_top = -1503.0
@@ -53,3 +64,47 @@ show_percentage = false
 [node name="penController" parent="." instance=ExtResource("4_1bvp3")]
 
 [node name="bossSpawner2D" parent="." instance=ExtResource("5_lquwl")]
+
+[node name="shopUI" type="Control" parent="."]
+top_level = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("7_272bh")
+
+[node name="shop" type="Control" parent="shopUI"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="shopUI/shop"]
+modulate = Color(0.44, 0.44, 0.44, 0.443137)
+layout_mode = 0
+offset_left = -3544.0
+offset_top = -1999.0
+offset_right = 3437.0
+offset_bottom = 1559.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5vw27")
+
+[node name="upgradeBar" parent="shopUI/shop" instance=ExtResource("8_5vw27")]
+process_mode = 2
+layout_mode = 1
+offset_left = -2702.0
+offset_top = -1592.0
+offset_right = -1572.0
+offset_bottom = -826.0
+
+[node name="openShop" type="Button" parent="shopUI"]
+process_mode = 3
+layout_mode = 0
+offset_left = 4143.0
+offset_top = -1575.0
+offset_right = 4719.0
+offset_bottom = -1110.0
+theme_override_font_sizes/font_size = 200
+toggle_mode = true
+text = "SHOP"
+
+[connection signal="toggled" from="shopUI/openShop" to="shopUI" method="_on_open_shop_toggled"]

@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://c74alvp0f6fry" path="res://eventSystem/bosses/bucket_boss.tscn" id="2_qcrht"]
 [ext_resource type="PackedScene" uid="uid://ctuqaqc0vp15g" path="res://eventSystem/bosses/black_hole_boss.tscn" id="3_nfoia"]
 [ext_resource type="PackedScene" uid="uid://s0k0lgp4lsdy" path="res://eventSystem/bosses/gravityBoss.tscn" id="4_ry377"]
-[ext_resource type="PackedScene" path="res://eventSystem/bosses/upSideDownBoss.tscn" id="5_k4ior"]
-[ext_resource type="PackedScene" path="res://eventSystem/bosses/fireBallBoss.tscn" id="6_p1omc"]
+[ext_resource type="PackedScene" uid="uid://docqukyu0g2h2" path="res://eventSystem/bosses/upSideDownBoss.tscn" id="5_k4ior"]
+[ext_resource type="PackedScene" uid="uid://kpbqn5rl514a" path="res://eventSystem/bosses/fireBallBoss.tscn" id="6_p1omc"]
 [ext_resource type="AudioStream" uid="uid://cr6rsuppskmk2" path="res://sounds/eventStart.mp3" id="7_wrx54"]
 
 [node name="bossSpawner2D" type="Node2D"]

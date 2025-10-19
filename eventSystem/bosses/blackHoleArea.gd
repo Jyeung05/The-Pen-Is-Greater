@@ -15,6 +15,5 @@ func _physics_process(delta: float) -> void:
 			if distance > eventHorizon:
 				var force = pullForce / (distance * distance)
 				body.apply_force(direction.normalized() * force)
-				print(force*delta *direction.normalized())
 			else :
 				body.queue_free()

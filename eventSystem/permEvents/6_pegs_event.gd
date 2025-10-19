@@ -3,7 +3,6 @@ var desc = "pegs block your path"
 var bounceForce: float = 500.0
 
 func activate():
-	print("pegs")
 	var positions = [
 		Vector2(0.0, -1600.0),
 		Vector2(-800, -800.0),

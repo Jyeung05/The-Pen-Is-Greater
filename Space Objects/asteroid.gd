@@ -45,7 +45,6 @@ func randomShoot(v: Vector2) -> void:
 	dir = v * 20
 
 func takeDamage(some):
-	print(some)
 func die() -> void:
 	queue_free()
 	

@@ -11,7 +11,6 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	if reCounter < GlobalStats.restartCounter:
-		print("recounter: " + str(reCounter))
 		reCounter += 1
 		deacFlag = true
 		for c in events:

@@ -57,11 +57,8 @@ func money() -> int:
 	for val in distrabution:
 		sum += val
 	var average = sum/7
-	print(sum)
-	print(moneyAddAmount)
-	print(moneyMult)
+
 	var cash = int( ceil((float(average)/float(distrabution[id -1])) * moneyAddAmount  * moneyMult))
-	print(cash)
 	return max(cash,1)
 
 func mutateMult(i:int):

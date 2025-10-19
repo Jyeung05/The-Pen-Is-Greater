@@ -71,7 +71,16 @@ func _on_plus() -> void:
 		upgradeCost = upgradeCost * upgradeCostMultiplyer
 		plus_btn.text = "Upgrade Cost: $" + str(upgradeCost)
 		_refresh()
-	
+
+	if GlobalStats.money >= upgradeCost and global_var_max == "buffMax":
+		if level >= max_level:
+			return
+		level +=1
+		GlobalStats.set(global_var, GlobalStats.get(global_var) + 1)
+		GlobalStats.money -= upgradeCost
+		upgradeCost = upgradeCost * upgradeCostMultiplyer
+		plus_btn.text = "Upgrade Cost: $" + str(upgradeCost)
+		_refresh()
 
 func _refresh() -> void:
 	for i in range(segments.get_child_count()):

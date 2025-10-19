@@ -29,6 +29,8 @@ var currentPen = penType.basic
 @export var eventList:Array = []
 
 @export var buffList:Array = []
+@export var buffAmount = 0
+@export var buffMax = 8
 
 @export var spawnCooldown: float = 1.0
 @export var asteroidWorth: int = 1

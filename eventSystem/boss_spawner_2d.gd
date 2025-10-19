@@ -9,9 +9,9 @@ func _ready() -> void:
 
 #func _process(delta: float) -> void:
 	#if Input.is_action_just_pressed("pen1"):
-		#bosses[3].activate()
+		#bosses[0].activate()
 		#await get_tree().create_timer(5, false).timeout  # Added pause-aware parameter
-		#bosses[3].deactivate()
+		#bosses[0].deactivate()
 
 
 	

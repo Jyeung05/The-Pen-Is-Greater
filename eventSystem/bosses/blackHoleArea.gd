@@ -1,7 +1,7 @@
 extends Area2D
 
 var eventHorizon = 100
-var pullForce = 5000000000
+var pullForce = 1000000000
 
 func _physics_process(delta: float) -> void:
 	var bodies = get_overlapping_bodies()

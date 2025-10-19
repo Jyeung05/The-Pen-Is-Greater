@@ -72,11 +72,16 @@ global_var = &"asteroidWorth"
 
 [node name="statCard7" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
 layout_mode = 2
-display_name = "unassigned"
+display_name = "Special Buff"
+global_var_max = &"buffMax"
+global_var = &"buffAmount"
+lockedName = &"Special Buff"
 
 [node name="statCard8" parent="HBoxContainer" groups=["stat_cards"] instance=ExtResource("2_8twcv")]
 layout_mode = 2
-display_name = "unassigned"
+display_name = ""
+global_var_max = &""
+global_var = &""
 
 [node name="pointsLabel" type="Label" parent="HBoxContainer"]
 layout_mode = 2

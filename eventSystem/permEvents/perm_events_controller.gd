@@ -7,7 +7,10 @@ func _ready() -> void:
 	events.shuffle()
 	eventClock()
 	
-
+func _process(delta: float) -> void:
+	if Input.is_action_pressed("pen2"):
+		events[0].activate()
+	pass
 func eventClock() -> void:
 	for event in events:
 		await get_tree().create_timer(15).timeout

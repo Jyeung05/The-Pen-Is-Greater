@@ -11,3 +11,6 @@ func activate():
 	var baskets = get_parent().getWorld().getBaskets()
 	for b in baskets:
 		b.moneyMult += increase
+
+func deactivate():
+	pass

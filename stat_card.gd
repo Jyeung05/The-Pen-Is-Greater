@@ -58,7 +58,7 @@ func _on_plus() -> void:
 		if level >= max_level:
 			return
 		level +=1
-		GlobalStats.set(global_var, GlobalStats.get(global_var) - 0.2)
+		GlobalStats.set(global_var, GlobalStats.get(global_var) * 0.6)
 		GlobalStats.money -= upgradeCost
 		upgradeCost = upgradeCost * upgradeCostMultiplyer
 		plus_btn.text = "Upgrade Cost: $" + str(upgradeCost)
